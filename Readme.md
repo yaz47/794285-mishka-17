@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ярослав Заярный](https://up.htmlacademy.ru/adaptive/17/user/794285).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://up.htmlacademy.ru/adaptive/17/user/5608).
 
 ---
 
