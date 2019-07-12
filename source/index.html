@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>Мишка - магазин рукоделия</title>
+</head>
 
-  </body>
+<body>
+
+  <header class="site-header">
+    <a class="site-header__site-logo site-logo" href="#" aria-label="На главную">
+      <img class="site-logo__img" alt="Логотип магазина Мишка" width="86" height="35">
+    </a>
+    <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
+    <nav class="site-header__navigation navigation">
+      <li class="navigation__item">
+        <a class="navigation-link" href="#">Каталог товаров</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation-link" href="#">Вязание на заказ</a>
+      </li>
+    </nav>
+    <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
+      <label class="visually-hidden" for="search">Поиск по сайту</label>
+      <input class="site-search__input-text" type="text" id="search" name="search" placeholder="Поиск по сайту"
+        required>
+      <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
+    </form>
+    <a class="site-header-site-cart site-cart" href="#">
+      Корзина: <span class="site-cart__contents">пока пуста</span>
+    </a>
+  </header>
+
+</body>
+
 </html>
