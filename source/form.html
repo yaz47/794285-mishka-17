@@ -91,15 +91,15 @@
           <ul class="order-form__list">
             <li class="order-form__item">
               <label class="order-form__label" for="name">Имя:</label>
-              <input class="order-form__input-text" type="text" name="name" id="name" pattern="\p{L}{2,30}" title="Имя может содержать только буквы" placeholder="Введите ваше имя*" autocomplete="on" autofocus required>
+              <input class="order-form__input-text" type="text" name="name" id="name" pattern="[а-яА-ЯёЁ]{2,30}" title="Имя может содержать только буквы" placeholder="Введите ваше имя*" autocomplete="on" autofocus required>
             </li>
             <li class="order-form__item">
               <label class="order-form__label" for="surname">Фамилия:</label>
-              <input class="order-form__input-text" type="text" name="surname" id="surname" pattern="\p{L}{2,40}" title="Фамилия может содержать только буквы" placeholder="Укажите фамилию*" autocomplete="on" required>
+              <input class="order-form__input-text" type="text" name="surname" id="surname" pattern="[а-яА-ЯёЁ]{2,40}" title="Фамилия может содержать только буквы" placeholder="Укажите фамилию*" autocomplete="on" required>
             </li>
             <li class="order-form__item">
               <label class="order-form__label" for="patronymic">Отчество:</label>
-              <input class="order-form__input-text" type="text" name="patronymic" id="patronymic" pattern="\p{L}{2,50}" title="Отчество может содержать только буквы" placeholder="Отчество, если желаете">
+              <input class="order-form__input-text" type="text" name="patronymic" id="patronymic" pattern="[а-яА-ЯёЁ]{2,50}" title="Отчество может содержать только буквы" placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
