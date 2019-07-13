@@ -10,16 +10,19 @@
 
   <header class="site-header">
     <a class="site-header__site-logo site-logo" href="#" aria-label="На главную">
-      <img class="site-logo__img" alt="Логотип магазина Мишка" width="86" height="35">
+      <img class="site-logo__img" src="https://via.placeholder.com/86x35.png" alt="Логотип магазина Мишка" width="86"
+        height="35">
     </a>
     <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
     <nav class="site-header__navigation navigation">
-      <li class="navigation__item">
-        <a class="navigation__link" href="#">Каталог товаров</a>
-      </li>
-      <li class="navigation__item">
-        <a class="navigation__link" href="#">Вязание на заказ</a>
-      </li>
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Вязание на заказ</a>
+        </li>
+      </ul>
     </nav>
     <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
       <label class="visually-hidden" for="search">Поиск по сайту</label>
@@ -98,7 +101,7 @@
       </ul>
     </section>
     <section class="feedback">
-      <h2 class="feedback__title"></h2>
+      <h2 class="feedback__title">Отзывы</h2>
       <div class="feedback__slider comments">
         <blockquote class="comments__comment">
           <p class="comments__text">
@@ -118,8 +121,10 @@
           </cite>
         </blockquote>
       </div>
-      <button class="feedback__button feedback__button--left button" type="button" aria-label="Предыдущий отзыв"></button>
-      <button class="feedback__button feedback__button--right button" type="button" aria-label="Следующий отзыв"></button>
+      <button class="feedback__button feedback__button--left button" type="button"
+        aria-label="Предыдущий отзыв"></button>
+      <button class="feedback__button feedback__button--right button" type="button"
+        aria-label="Следующий отзыв"></button>
       <a class="feedback__button button" href="#">Написать</a>
     </section>
     <section class="contacts">
@@ -138,12 +143,33 @@
           </dd>
         </dl>
       </address>
-      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CCsj4JIa" width="322" height="457" frameborder="0" allowfullscreen="true"></iframe>
+      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CCsj4JIa" width="322" height="457"
+        style="border: 0;" aria-label="Карта проезда"></iframe>
       <a class="contacts__feedback button" href="write.html">
         Напишите нам
       </a>
     </section>
   </main>
+  <footer class="site-footer">
+    <ul class="site-footer__social-list social">
+      <li class="social__item">
+        <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
+      </li>
+    </ul>
+    <div class="site-footer__developer developer">
+      <b class="developer__text">Разработано</b>
+      <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
+        <img class="developer__logo" src="https://via.placeholder.com/27x34.png" width="27" height="34"
+          alt="Логотип HTML Academy">
+      </a>
+    </div>
+  </footer>
 
 </body>
 
