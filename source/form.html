@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Мишка - заказ изделия</title>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="site-header__site-logo site-logo" href="index.html" aria-label="На главную">
+      <img class="site-logo__img" src="https://via.placeholder.com/86x35.png" alt="Логотип магазина Мишка" width="86"
+        height="35">
+    </a>
+    <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
+    <nav class="site-header__navigation navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Каталог товаров</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Вязание на заказ</a>
+        </li>
+      </ul>
+    </nav>
+    <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
+      <label class="visually-hidden" for="search">Поиск по сайту</label>
+      <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
+        required>
+      <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
+    </form>
+    <a class="site-header__site-cart site-cart" href="#">
+      Корзина: <span class="site-cart__contents">пока пуста</span>
+    </a>
+  </header>
+
+  <main>
+    <h1 class="inner-title">Вязание на заказ</h1>
+    <section class="order">
+      <h2 class="visually-hidden">Форма для заказа товара</h2>
+      <p class="order__text">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую
+        форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form class="order__order-form order-form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Тип</legend>
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <input class="order-form__radio" type="radio" name="type" value="accessory" id="accessory" checked>
+              <label class="order-form__label" for="accessory">Аксессуар для интерьера</label>
+            </li>
+            <li class="order-form__item">
+              <input class="order-form__radio" type="radio" name="type" value="toy" id="toy">
+              <label class="order-form__label" for="toy">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Цвет</legend>
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <input class="order-form__checkbox" type="checkbox" name="white" id="white" checked>
+              <label class="order-form__label" for="white">Белый</label>
+            </li>
+            <li class="order-form__item">
+              <input class="order-form__checkbox" type="checkbox" name="gray" id="gray" checked>
+              <label class="order-form__label" for="gray">Серый</label>
+            </li>
+            <li class="order-form__item">
+              <input class="order-form__checkbox" type="checkbox" name="tiffany" id="tiffany">
+              <label class="order-form__label" for="tiffany">&laquo;Тиффани&raquo;</label>
+            </li>
+            <li class="order-form__item">
+              <input class="order-form__checkbox" type="checkbox" name="black" id="black">
+              <label class="order-form__label" for="black">Черный</label>
+            </li>
+            <li class="order-form__item">
+              <input class="order-form__checkbox" type="checkbox" name="pink" id="pink">
+              <label class="order-form__label" for="pink">Розовый</label>
+            </li>
+            <li class="order-form__item">
+              <input class="order-form__checkbox" type="checkbox" name="orange" id="orange">
+              <label class="order-form__label" for="orange">Оранжевый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">ФИО</legend>
+          <ul class="order-form__list">
+            <li class="order-form__item">
+              <label class="order-form__label" for="name">Имя:</label>
+              <input class="order-form__input-text" type="text" name="name" id="name" pattern="[а-яА-ЯёЁ]{2,30}" title="Имя может содержать только буквы" placeholder="Введите ваше имя*" autocomplete="on" autofocus required>
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__label" for="surname">Фамилия:</label>
+              <input class="order-form__input-text" type="text" name="surname" id="surname" pattern="[а-яА-ЯёЁ]{2,40}" title="Фамилия может содержать только буквы" placeholder="Укажите фамилию*" autocomplete="on" required>
+            </li>
+            <li class="order-form__item">
+              <label class="order-form__label" for="patronymic">Отчество:</label>
+              <input class="order-form__input-text" type="text" name="patronymic" id="patronymic" pattern="[а-яА-ЯёЁ]{2,50}" title="Отчество может содержать только буквы" placeholder="Отчество, если желаете">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Тел</legend>
+          <label class="order-form__label" for="tel">Телефон:</label>
+          <input class="order-form__input-text" type="tel" name="tel" id="tel" pattern="\+7(\s\d{3}){2}(\s\d{2}){2}" title="Телефон начинается с +7, может содержать только цифры и пробелы" placeholder="+7 XXX XXX XX XX*" autocomplete="on" required>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">E-mail</legend>
+          <label class="order-form__label" for="email">e-mail:</label>
+          <input class="order-form__input-text" type="email" name="email" id="email" placeholder="Ваш Email*" autocomplete="on" required>
+        </fieldset>
+        <fieldset class="order-form__fieldset">
+          <legend class="order-form__legend">Доп</legend>
+          <label class="order-form__label" for="add">Дополнительно:</label>
+          <textarea class="order-form__textarea" name="add" id="add"
+            placeholder="Опишите все ваши пожелания к заказу" rows="6"></textarea>
+        </fieldset>
+        <span class="order-form__text">*Поля обязательны для заполнения</span>
+        <button class="order-form__button button" type="submit">
+          Отправить заказ
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul class="site-footer__social-list social">
+      <li class="social__item">
+        <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
+      </li>
+      <li class="social__item">
+        <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
+      </li>
+    </ul>
+    <div class="site-footer__developer developer">
+      <b class="developer__text">Разработано</b>
+      <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
+        <img class="developer__logo" src="https://via.placeholder.com/27x34.png" width="27" height="34"
+          alt="Логотип HTML Academy">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
