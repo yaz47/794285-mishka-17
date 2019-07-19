@@ -1,0 +1,29 @@
+.popular-merch {
+  font-family: $default-font;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.6;
+  color: $default-text-color;
+}
+
+.popular-merch__title {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: $title-text-color;
+}
+
+.popular-merch__feature {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
+  color: $seafoam-blue;
+  text-transform: uppercase;
+}
+
+.popular-merch__price {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  color: $default-text-color;
+}
