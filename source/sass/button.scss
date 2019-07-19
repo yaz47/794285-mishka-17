@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  padding: 1em;
+
+  font-family: $default-font;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
+  color: $default-text-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid $very-dark-grey;
+  background-color: $default-bg-color;
+}
