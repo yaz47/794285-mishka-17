@@ -1,0 +1,16 @@
+.navigation {
+  font-family: $default-font;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  color: $title-text-color;
+}
+
+.navigation__list {
+  list-style: none;
+}
+
+.navigation__link {
+  font: inherit;
+  color: $title-text-color;
+}
