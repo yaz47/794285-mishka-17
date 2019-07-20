@@ -4,23 +4,24 @@
 <head>
   <meta charset="utf-8">
   <title>Мишка - магазин рукоделия</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="site-header">
     <a class="site-header__site-logo site-logo" aria-label="На главную">
-      <img class="site-logo__img" src="https://via.placeholder.com/86x35.png" alt="Логотип магазина Мишка" width="86"
+      <img class="site-logo__img" src="img/logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
         height="35">
     </a>
     <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
     <nav class="site-header__navigation navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Каталог товаров</a>
+          <a class="navigation__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">Вязание на заказ</a>
+          <a class="navigation__link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
     </nav>
@@ -42,12 +43,12 @@
       </h1>
       <ul class="site-description__list store-items">
         <li class="store-items__item">
-          <a class="store-items__link" href="#">
+          <a class="store-items__link store-items__link--interior" href="#">
             Предметы интерьера
           </a>
         </li>
         <li class="store-items__item">
-          <a class="store-items__link" href="#">
+          <a class="store-items__link store-items__link--toys" href="#">
             Детские игрушки
           </a>
         </li>
@@ -74,28 +75,29 @@
           <td class="spec__cell">15 см</td>
         </tr>
       </table>
+      <img class="popular-merch__img" src="img/triple-set-mobile@1x.jpg" alt="Вязанные картинка" width="260" height="315">
       <span class="popular-merch__price">Цена: 990 руб.</span>
       <a class="popular-merch__order-button button" href="#">Заказать</a>
     </section>
     <section class="features">
       <h2 class="features__title">Коротко о нас:</h2>
       <ul class="features__list">
-        <li class="features__item">
+        <li class="features__item features__item--flower">
           Экологически чистые материалы
         </li>
-        <li class="features__item">
+        <li class="features__item features__item--money">
           Скандинавский стиль по российской цене
         </li>
-        <li class="features__item">
+        <li class="features__item features__item--heart">
           Увеличивает лайки на фотографиях
         </li>
-        <li class="features__item">
+        <li class="features__item features__item--ball">
           Связано вручную с любовью и умилением
         </li>
-        <li class="features__item">
+        <li class="features__item features__item--rocket">
           Поддержка отечественного производителя
         </li>
-        <li class="features__item">
+        <li class="features__item features__item--gift">
           Поставляется в подарочной упаковке
         </li>
       </ul>
@@ -121,9 +123,9 @@
           </cite>
         </blockquote>
       </div>
-      <button class="feedback__button feedback__button--left button" type="button"
+      <button class="feedback__arrow feedback__arrow--left button" type="button"
         aria-label="Предыдущий отзыв"></button>
-      <button class="feedback__button feedback__button--right button" type="button"
+      <button class="feedback__arrow feedback__arrow--right button" type="button"
         aria-label="Следующий отзыв"></button>
       <a class="feedback__button button" href="#">Написать</a>
     </section>
@@ -165,7 +167,7 @@
     <div class="site-footer__developer developer">
       <b class="developer__text">Разработано</b>
       <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
-        <img class="developer__logo" src="https://via.placeholder.com/27x34.png" width="27" height="34"
+        <img class="developer__logo" src="img/logo-htmlacademy.svg" width="27" height="34"
           alt="Логотип HTML Academy">
       </a>
     </div>

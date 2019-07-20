@@ -1,0 +1,11 @@
+.spec {
+  font-family: $default-font;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1.33;
+  color: $default-text-color;
+}
+
+.spec__cell {
+  border-bottom: 1px solid $grey--light;
+}

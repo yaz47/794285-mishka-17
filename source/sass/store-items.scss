@@ -1,0 +1,29 @@
+.store-items {
+  list-style: none;
+}
+
+.store-items__link {
+  display: block;
+
+  font-family: $default-font;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.26;
+  color: $inverse-text-color;
+
+  background-color: $blue--seafoam;
+
+  &--interior {
+    background-color: $blue--seafoam;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+  }
+
+  &--toys {
+    background-color: $aqua-marine;
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    background-position: 80% 50%;
+  }
+}
