@@ -1,0 +1,27 @@
+.card {
+  font-family: $default-font;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.41;
+  color: $default-text-color;
+
+  border: 1px solid $very-light-grey;
+}
+
+.card__name {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  color: $title-text-color;
+}
+
+.card__text {
+  line-height: 2.31;
+}
+
+.card__price {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: $title-text-color;
+}
