@@ -1,0 +1,18 @@
+.site-header {
+  position: relative;
+}
+
+.site-header__site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  border-bottom: 1px solid $grey--light;
+}
+
+.site-header__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

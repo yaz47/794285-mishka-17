@@ -7,10 +7,28 @@
 }
 
 .navigation__list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .navigation__link {
+  display: block;
+  padding: 26px 10% 20px 23.75%;
+  min-height: 80px;
+
   font: inherit;
+  text-align: left;
   color: $title-text-color;
+
+  border-bottom: 1px solid $grey--light;
+
+  &:hover {
+    color: rgba($title-text-color, 0.6);
+  }
+
+  &:active {
+    color: rgba($title-text-color, 0.3);
+  }
 }
