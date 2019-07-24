@@ -1,13 +1,24 @@
 .site-description {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 488px;
+
+  background-color: $default-bg-color;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: top center;
 }
 
 .site-description__title {
+  display: block;
+  flex-grow: 1;
+  margin: 0;
+  padding: 70px calc(50% - 125px) 20px;
+
   font-family: $default-font;
   font-size: 27px;
   font-weight: bold;
   line-height: 1.11;
   color: $title-text-color;
+  text-align: center;
 }
