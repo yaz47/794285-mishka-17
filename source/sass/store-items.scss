@@ -66,3 +66,31 @@
     opacity: 0.3;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .store-items {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 50px;
+  }
+
+  .store-items__item {
+    width: 50%;
+  }
+
+  .store-items__link {
+    width: 100%;
+    min-height: 119px;
+    padding: 30px 65% 30px 9%;
+
+    font-size: 20px;
+    line-height: 1.5;
+
+    &:hover {
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+  }
+}

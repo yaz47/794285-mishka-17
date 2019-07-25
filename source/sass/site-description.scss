@@ -22,3 +22,20 @@
   color: $title-text-color;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .site-description {
+    margin-top: -60px;
+    height: 745px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+  }
+
+  .site-description__title {
+    padding: 155px calc(50% - 250px) 40px;
+
+    font-family: $default-font;
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}

@@ -38,7 +38,8 @@
   .site-header__site-logo {
     justify-content: flex-start;
     flex-grow: 1;
-    width: 35%;
+    flex-shrink: 1;
+    width: 40%;
     height: 88px;
     padding-left: 51px;
 
