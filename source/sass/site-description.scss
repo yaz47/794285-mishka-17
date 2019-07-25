@@ -34,8 +34,20 @@
   .site-description__title {
     padding: 155px calc(50% - 250px) 40px;
 
-    font-family: $default-font;
     font-size: 43px;
     line-height: 1.16;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-description {
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  .site-description__title {
+    padding: 155px calc(50% - 310px) 40px;
+
+    font-size: 53px;
+    line-height: 1.08;
   }
 }
