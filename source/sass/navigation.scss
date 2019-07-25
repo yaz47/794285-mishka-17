@@ -49,3 +49,21 @@
     border: none;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .navigation__item {
+
+    &:first-child {
+      border-right: 1px solid $grey--light;
+    }
+  }
+
+  .navigation__link {
+    height: 88px;
+    margin: 0;
+    padding: 30px 30px;
+
+    font-size: 17px;
+    line-height: 1.41;
+  }
+}
