@@ -11,8 +11,7 @@
 
   <header class="site-header">
     <a class="site-header__site-logo site-logo" aria-label="На главную">
-      <img class="site-logo__img" src="img/logo-mobile.svg" alt="Логотип магазина Мишка" width="86"
-        height="35">
+      <img class="site-logo__img" src="img/logo-mobile.svg" alt="Логотип магазина Мишка" width="86" height="35">
     </a>
     <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
     <nav class="site-header__navigation navigation">
@@ -25,15 +24,26 @@
         </li>
       </ul>
     </nav>
-    <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
-      <label class="visually-hidden" for="search">Поиск по сайту</label>
-      <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
-        required>
-      <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
-    </form>
-    <a class="site-header__site-cart site-cart" href="#">
-      Корзина: <span class="site-cart__contents">пока пуста</span>
-    </a>
+    <div class="site-header__user-interface">
+      <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="visually-hidden" for="search">Поиск по сайту</label>
+        <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
+          required>
+        <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
+      </form>
+      <a class="site-header__site-cart site-cart" href="#">
+        Корзина: <span class="site-cart__contents">пока пуста</span>
+      </a>
+    </div>
+    <ul class="site-header__new-list">
+      <li class="site-header__new-list-item">
+        <a class="site-header__new-list-link" href="#">Новые поступления</a>
+      </li>
+      <li class="site-header__new-list-item">
+        <a class="site-header__new-list-link" href="#">Распродажа</a>
+      </li>
+    </ul>
+    <div class="site-header__feature">Бесплатная доставка по России</div>
   </header>
 
   <main>
@@ -75,7 +85,8 @@
           <td class="spec__cell">15 см</td>
         </tr>
       </table>
-      <img class="popular-merch__img" src="img/triple-set-mobile@1x.jpg" alt="Вязанные картинка" width="260" height="315">
+      <img class="popular-merch__img" src="img/triple-set-mobile@1x.jpg" alt="Вязанные картинка" width="260"
+        height="315">
       <span class="popular-merch__price">Цена: 990 руб.</span>
       <a class="popular-merch__order-button button" href="#">Заказать</a>
     </section>
@@ -123,10 +134,8 @@
           </cite>
         </blockquote>
       </div>
-      <button class="feedback__arrow feedback__arrow--left button" type="button"
-        aria-label="Предыдущий отзыв"></button>
-      <button class="feedback__arrow feedback__arrow--right button" type="button"
-        aria-label="Следующий отзыв"></button>
+      <button class="feedback__arrow feedback__arrow--left button" type="button" aria-label="Предыдущий отзыв"></button>
+      <button class="feedback__arrow feedback__arrow--right button" type="button" aria-label="Следующий отзыв"></button>
       <a class="feedback__button button" href="#">Написать</a>
     </section>
     <section class="contacts">
@@ -167,8 +176,7 @@
     <div class="site-footer__developer developer">
       <b class="developer__text">Разработано</b>
       <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
-        <img class="developer__logo" src="img/logo-htmlacademy.svg" width="27" height="34"
-          alt="Логотип HTML Academy">
+        <img class="developer__logo" src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>

@@ -32,3 +32,20 @@
     color: rgba($title-text-color, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .navigation__list {
+    display: flex;
+  }
+
+  .navigation__link {
+    min-height: auto;
+    margin-left: 48px;
+    padding: 18px 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    border: none;
+  }
+}

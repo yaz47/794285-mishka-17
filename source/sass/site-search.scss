@@ -1,5 +1,12 @@
 .site-search {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 80px;
+
+  border-bottom: 1px solid $grey--light;
+
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -29,7 +36,6 @@
 
 .site-search__input-text {
   width: 100%;
-  min-height: 80px;
   padding: 10px 10% 14px 23.75%;
 
   font-family: $default-font;
@@ -39,9 +45,29 @@
   color: $title-text-color;
 
   border: none;
-  border-bottom: 1px solid $grey--light;
 
   &::placeholder {
     color: $title-text-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-search {
+    &::after {
+      left: 35px;
+    }
+  }
+
+  .site-search__input-text {
+    padding: 10px 52px 10px 82px;
+
+    &::placeholder {
+      color: $default-bg-color;
+    }
+
+    &:focus::placeholder,
+    &:active::placeholder {
+      color: $title-text-color;
+    }
   }
 }

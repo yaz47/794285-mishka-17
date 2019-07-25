@@ -46,3 +46,9 @@
     color: rgba($title-text-color, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .site-cart {
+    padding: 30px 52px 30px 80px;
+  }
+}
