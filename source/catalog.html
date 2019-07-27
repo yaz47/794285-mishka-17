@@ -6,6 +6,29 @@
   <title>Мишка - каталог товаров</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
+  <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("../img/pixel-glass/mishka-catalog-mobile.jpg");
+    }
+    /* Tablet */
+    @media (min-width: 768px) {
+      html {
+        /* Tablet layout */
+        background-image: url("../img/pixel-glass/mishka-catalog-tablet.jpg");
+      }
+    }
+    /* Desktop */
+    @media (min-width: 1150px) {
+      html {
+        /* Desktop layout */
+        background-image: url("../img/pixel-glass/mishka-catalog-desktop.jpg");
+      }
+    }
+  </style>
+  <script src="js/script.js" defer></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
