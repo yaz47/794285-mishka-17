@@ -47,3 +47,16 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  margin: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}

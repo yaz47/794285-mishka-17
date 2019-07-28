@@ -1,5 +1,6 @@
 .site-header__container {
   position: relative;
+  margin: 0;
 }
 
 .site-header__site-logo {
@@ -29,7 +30,6 @@
   .site-header__container {
     display: flex;
     flex-flow: row wrap;
-    margin: 0 50px;
   }
 
   .site-header__toggle {
@@ -100,11 +100,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  .site-header__container {
-    width: 1050px;
-    margin: 0 auto;
-  }
-
   .site-header__navigation {
     width: 50%;
     height: 89px;
