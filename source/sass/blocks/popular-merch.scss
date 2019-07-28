@@ -7,23 +7,53 @@
 }
 
 .popular-merch__title {
+  margin: 25px 0 5px 0;
+  padding: 0;
+
   font-size: 25px;
   font-weight: bold;
   line-height: 1.2;
   color: $title-text-color;
+  text-align: left;
 }
 
 .popular-merch__feature {
+  margin: 5px 0;
+
   font-size: 17px;
   font-weight: bold;
   line-height: 1.18;
   color: $blue--seafoam;
+  text-align: left;
   text-transform: uppercase;
 }
 
+.popular-merch__wrapper {
+  margin: 17px 0;
+  padding: 0 1px;
+}
+
+.popular-merch__description {
+  margin: 10px 0;
+}
+
+.popular-merch__spec {
+  margin: 18px 0 30px 0;
+  padding: 0;
+}
+
 .popular-merch__price {
+  display: block;
+  margin: 20px 0 25px 0;
+  padding: 0 1px;
+
   font-size: 17px;
   font-weight: bold;
   line-height: 1.41;
   color: $default-text-color;
+  text-align: center;
+}
+
+.popular-merch__order-button {
+  margin: 5px 0;
 }

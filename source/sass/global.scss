@@ -49,6 +49,7 @@ body {
 }
 
 .container {
+  position: relative;
   margin: 0 30px;
 
   @media (min-width: $tablet-width) {

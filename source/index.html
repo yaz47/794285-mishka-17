@@ -102,30 +102,35 @@
     </section>
     <section class="popular-merch">
       <div class="popular-merch__container container">
-        <h2 class="popular-merch__title">Вязанные корзинки</h2>
+        <h2 class="popular-merch__title">Вязаные корзинки</h2>
         <span class="popular-merch__feature">Товар недели</span>
-        <p class="popular-merch__description">
-          Экологически чистая пряжа, ручной работы. Доступны в шести
-          расцветках и трех размерах.
-        </p>
-        <table class="popular-merch__spec spec">
-          <tr class="spec__row">
-            <td class="spec__cell">Цвет:</td>
-            <td class="spec__cell">&laquo;Тиффани&raquo;/серый</td>
-          </tr>
-          <tr class="spec__row">
-            <td class="spec__cell">Диаметр:</td>
-            <td class="spec__cell">25 см</td>
-          </tr>
-          <tr class="spec__row">
-            <td class="spec__cell">Высота:</td>
-            <td class="spec__cell">15 см</td>
-          </tr>
-        </table>
-        <img class="popular-merch__img" src="img/triple-set-mobile@1x.jpg" alt="Вязанные картинка" width="260"
-          height="315">
-        <span class="popular-merch__price">Цена: 990 руб.</span>
-        <a class="popular-merch__order-button button" href="#">Заказать</a>
+        <div class="popular-merch__wrapper">
+          <p class="popular-merch__description">
+            Экологически чистая пряжа, ручной работы. Доступны в шести
+            расцветках и трех размерах.
+          </p>
+          <table class="popular-merch__spec spec">
+            <tr class="spec__row">
+              <td class="spec__column-1">Цвет:</td>
+              <td class="spec__column-2">&laquo;Тиффани&raquo;/серый</td>
+            </tr>
+            <tr class="spec__row">
+              <td class="spec__column-1">Диаметр:</td>
+              <td class="spec__column-2">25 см</td>
+            </tr>
+            <tr class="spec__row">
+              <td class="spec__column-1">Высота:</td>
+              <td class="spec__column-2">15 см</td>
+            </tr>
+          </table>
+          <picture class="popular-merch__img">
+            <source media="(min-width: 1150px)" srcset="triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинка">
+          </picture>
+          <span class="popular-merch__price">Цена: 990 руб.</span>
+          <a class="popular-merch__order-button button" href="#">Заказать</a>
+        </div>
       </div>
     </section>
     <section class="features">

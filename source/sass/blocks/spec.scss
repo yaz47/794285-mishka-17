@@ -4,8 +4,20 @@
   font-weight: normal;
   line-height: 1.33;
   color: $default-text-color;
+
+  border-collapse: collapse;
 }
 
-.spec__cell {
+.spec__column-1,
+.spec__column-2 {
+  padding: 10px 0;
+}
+
+.spec__column-1 {
+  width: 42%;
+  padding-right: 25px;
+}
+
+.spec__row {
   border-bottom: 1px solid $grey--light;
 }
