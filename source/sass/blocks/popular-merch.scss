@@ -42,9 +42,14 @@
   padding: 0;
 }
 
+.popular-merch__img {
+  display: flex;
+  justify-content: center;
+}
+
 .popular-merch__price {
   display: block;
-  margin: 20px 0 25px 0;
+  margin: 25px 0;
   padding: 0 1px;
 
   font-size: 17px;
