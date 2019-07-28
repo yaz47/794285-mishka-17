@@ -1,6 +1,9 @@
 .site-header__container {
   position: relative;
-  margin: 0;
+
+  @media (max-width: $only-mobile-width) {
+    margin: 0;
+  }
 }
 
 .site-header__site-logo {

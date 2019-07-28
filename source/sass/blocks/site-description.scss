@@ -11,7 +11,10 @@
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
-  margin: 0;
+
+  @media (max-width: $only-mobile-width) {
+    margin: 0;
+  }
 }
 
 .site-description__title {
