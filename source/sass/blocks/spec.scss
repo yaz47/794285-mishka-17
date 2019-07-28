@@ -23,3 +23,9 @@
 .spec__row {
   border-bottom: 1px solid $grey--light;
 }
+
+@media (min-width: $tablet-width) {
+  .spec__column-1 {
+    width: 15%;
+  }
+}

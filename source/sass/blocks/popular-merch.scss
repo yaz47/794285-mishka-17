@@ -62,3 +62,72 @@
 .popular-merch__order-button {
   margin: 5px 0;
 }
+
+@media (min-width: $tablet-width) {
+  .popular-merch {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      top: -55px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
+  }
+
+  .popular-merch__title {
+    margin: 45px 150px 50px 0;
+    padding: 0;
+
+    font-size: 43px;
+    line-height: 1.16;
+  }
+
+  .popular-merch__feature {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin: 0;
+    padding: 5px;
+
+    line-height: 1;
+    text-align: center;
+  }
+
+  .popular-merch__wrapper {
+    margin: 17px 375px 17px 0;
+    padding: 0 1px;
+  }
+
+  .popular-merch__description {
+    margin: 10px 0 40px 0;
+    font-size: 17px;
+    line-height: 1.76;
+  }
+
+  .popular-merch__img {
+    position: absolute;
+    top: 105px;
+    right: 0;
+
+    width: 340px;
+    justify-content: flex-end;
+  }
+
+  .popular-merch__price {
+    margin: 55px 0 35px 0;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
