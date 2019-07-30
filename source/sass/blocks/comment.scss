@@ -1,9 +1,18 @@
 .comment {
+  margin: 20px 0;
+  padding: 0;
+
   font-family: $default-font;
   font-size: 15px;
   font-weight: normal;
   line-height: 2;
   color: $default-text-color;
+}
+
+.comment__author {
+  display: block;
+  margin: 25px 0;
+  padding: 0;
 }
 
 .comment__author-name {

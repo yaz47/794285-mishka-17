@@ -1,4 +1,6 @@
 .feedback__title {
+  margin: 55px 0 25px 0;
+
   font-family: $default-font;
   font-size: 25px;
   font-weight: bold;
@@ -6,16 +8,50 @@
   color: $title-text-color;
 }
 
-.feedback__arrow {
-  border: 1px solid $grey--light;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.feedback__arrow-wrapper {
+  display: flex;
+  margin: 27px 0 40px 0;
+}
 
-  &--left {
+.feedback__arrow {
+  position: relative;
+  width: 50%;
+  height: 52px;
+
+  border: 1px solid $grey--light;
+  background-color: $default-bg-color;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 26px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &--left::before {
     background-image: url("../img/icon-left-arrow.svg");
   }
 
-  &--right {
+  &--right::before {
     background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.6;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
