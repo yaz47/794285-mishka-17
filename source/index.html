@@ -182,35 +182,42 @@
           </blockquote>
         </div>
         <div class="feedback__arrow-wrapper">
-          <button class="feedback__arrow feedback__arrow--left" type="button"
-            aria-label="Предыдущий отзыв"></button>
-          <button class="feedback__arrow feedback__arrow--right" type="button"
-            aria-label="Следующий отзыв"></button>
+          <button class="feedback__arrow feedback__arrow--left" type="button" aria-label="Предыдущий отзыв"></button>
+          <button class="feedback__arrow feedback__arrow--right" type="button" aria-label="Следующий отзыв"></button>
         </div>
         <a class="feedback__button button" href="#">Написать</a>
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <address class="contacts__address">
-        <dl class="contacts__address">
-          <dt class="contacts__term">e-mail:</dt>
-          <dd class="contacts__text">
-            <a class="contacts__link" href="mailto:info@mimimishkashop.ru?subject=Info">
-              info@mimimishkashop.ru</a>
-          </dd>
-          <dt class="contacts__term">адрес:</dt>
-          <dd class="contacts__text">
-            г. Санкт-Петербург, ул. Большая Конюшенная,
-            д. 19/8, офис 101
-          </dd>
-        </dl>
-      </address>
-      <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/-/CCsj4JIa" width="322" height="457"
-        style="border: 0;" aria-label="Карта проезда"></iframe>
-      <a class="contacts__feedback button" href="write.html">
-        Напишите нам
-      </a>
+      <div class="contacts__container container">
+        <h2 class="contacts__title">Контакты</h2>
+        <address class="contacts__address">
+          <dl class="contacts__address">
+            <div class="contacts__wrapper">
+              <dt class="contacts__term">e-mail:</dt>
+              <dd class="contacts__text">
+                <a class="contacts__link" href="mailto:info@mimimishkashop.ru?subject=Info">
+                  info@mimimishkashop.ru</a>
+              </dd>
+            </div>
+            <div class="contacts__wrapper">
+              <dt class="contacts__term">адрес:</dt>
+              <dd class="contacts__text contacts__text--tight">
+                г. Санкт-Петербург, ул. Большая Конюшенная,
+                д.&nbsp;19/8, офис 101
+              </dd>
+            </div>
+          </dl>
+        </address>
+        <div class="contacts__map">
+          <iframe class="contacts__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya+Konyushennaya+Street%2C+19%2F8%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1564585909035!5m2!1sen!2sru"
+            width="260" height="457" frameborder="0" style="border: 0;" allowfullscreen></iframe>
+        </div>
+        <a class="contacts__feedback button" href="write.html">
+          Напишите нам
+        </a>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
