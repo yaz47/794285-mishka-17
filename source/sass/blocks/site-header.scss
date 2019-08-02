@@ -1,0 +1,153 @@
+.site-header__container {
+  @media (max-width: $only-mobile-width) {
+    margin: 0;
+  }
+}
+
+.site-header__site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+
+  border-bottom: 1px solid $grey--light;
+}
+
+.site-header__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.site-header__new-list {
+  display: none;
+}
+
+.site-header__feature {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .site-header__container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-header__toggle {
+    display: none;
+  }
+
+  .site-header__site-logo {
+    justify-content: flex-start;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 40%;
+    height: 89px;
+
+    border-right: 1px solid $grey--light;
+    border-bottom: none;
+  }
+
+  .site-header__user-interface {
+    display: flex;
+    width: 350px;
+
+    overflow: hidden;
+  }
+
+  .site-header__site-search {
+    width: 84px;
+    height: 89px;
+
+    border-right: 1px solid $grey--light;
+    border-bottom: none;
+
+    &:focus-within {
+      flex-grow: 1;
+    }
+
+    &:focus-within ~ .site-header__site-cart {
+      display: none;
+    }
+  }
+
+  .site-header__site-cart {
+    flex-grow: 1;
+
+    text-align: right;
+
+    border-bottom: none;
+  }
+
+  .site-header__navigation {
+    order: 1;
+  }
+
+  .site-header__feature {
+    display: block;
+    flex-grow: 1;
+    margin: 0;
+    padding: 18px 0 18px 10px;
+
+    font-family: $default-font;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: $title-text-color;
+    text-align: right;
+
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-header__navigation {
+    width: 50%;
+    height: 89px;
+    flex-grow: 1;
+
+    order: -1;
+  }
+
+  .site-header__site-logo {
+    position: absolute;
+    left: 50%;
+
+    justify-content: center;
+    width: 149px;
+    padding: 0;
+
+    border: none;
+
+    transform: translateX(-50%);
+  }
+
+  .site-header__site-search {
+    border-left: 1px solid $grey--light;
+  }
+
+  .site-header__new-list {
+    display: flex;
+    flex-grow: 1;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .site-header__new-list-link {
+    display: block;
+    padding: 18px 60px 18px 0;
+
+    font-family: $default-font;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: $title-text-color;
+  }
+
+  .site-header__feature {
+    width: 40%;
+  }
+}

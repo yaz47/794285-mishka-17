@@ -1,0 +1,62 @@
+.site-description {
+  height: 488px;
+
+  background-color: $default-bg-color;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.site-description__container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+
+  @media (max-width: $only-mobile-width) {
+    margin: 0;
+  }
+}
+
+.site-description__title {
+  display: block;
+  flex-grow: 1;
+  margin: 0;
+  padding: 70px calc(50% - 125px) 20px;
+
+  font-family: $default-font;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.11;
+  color: $title-text-color;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .site-description {
+    margin-top: -60px;
+    height: 745px;
+
+    border-top: 1px solid $grey--light;
+    background-image: url("../img/hero-tablet@1x.jpg");
+  }
+
+  .site-description__title {
+    padding: 155px calc(50% - 250px) 40px;
+
+    font-size: 43px;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-description {
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  .site-description__title {
+    padding: 155px calc(50% - 310px) 40px;
+
+    font-size: 53px;
+    line-height: 1.08;
+  }
+}

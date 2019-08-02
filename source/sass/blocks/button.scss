@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  padding: 14px 5px;
+
+  font-family: $default-font;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.18;
+  color: $default-text-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid $grey--dark;
+  background-color: $default-bg-color;
+
+  &:hover,
+  &:focus {
+    color: $inverse-text-color;
+
+    background-color: $grey--dark;
+  }
+
+  &:active {
+    color: rgba($inverse-text-color, 0.3);
+
+    background-color: $grey--dark;
+  }
+}
