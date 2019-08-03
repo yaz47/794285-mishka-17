@@ -3,7 +3,9 @@
 }
 
 .site-footer__container {
-  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 
   &::before {
     content: "";
@@ -23,12 +25,11 @@
 }
 
 .site-footer__social-list {
-  display: inline-flex;
   margin: 25px 10px;
 }
 
 .site-footer__developer {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   margin: 23px 10px;
 
