@@ -1,9 +1,14 @@
 .inner-title {
+  display: block;
+  margin: 0;
+  padding: 65px 10px 78px 10px;
+
   font-family: $default-font;
   font-size: 27px;
   font-weight: bold;
   line-height: 1.11;
   color: $title-text-color;
+  text-align: center;
 
   background-color: $pink--light;
 }
