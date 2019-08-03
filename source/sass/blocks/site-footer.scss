@@ -62,3 +62,38 @@
 
   opacity: 0.6;
 }
+
+@media (min-width: $tablet-width) {
+  .site-footer__container {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 143px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .site-footer__site-logo {
+    display: block;
+    width: 102px;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer__social-list {
+    margin: 0;
+    margin-left: 11%;
+  }
+
+  .site-footer__developer {
+    margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .site-footer__social-list {
+    margin-left: 80px;
+  }
+}
