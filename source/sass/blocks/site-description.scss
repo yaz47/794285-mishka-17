@@ -8,6 +8,7 @@
 }
 
 .site-description__container {
+  position: static;
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
