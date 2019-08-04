@@ -1,4 +1,7 @@
 .card {
+  width: 260px;
+  margin: 0 auto;
+
   font-family: $default-font;
   font-size: 13px;
   font-weight: normal;
@@ -94,6 +97,8 @@
 @media (min-width: $tablet-width) {
   .card {
     display: flex;
+    width: auto;
+    margin: 0;
   }
 
   .card__link-img {
