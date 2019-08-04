@@ -38,9 +38,21 @@
 
 @media (min-width: $desktop-width) {
   .catalog-merchandise {
+    padding-top: 120px;
+
     &::before {
       height: 34px;
-      top: -140px;
+      top: -25px;
     }
+  }
+
+  .catalog-merchandise__list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -50px;
+  }
+
+  .catalog-merchandise__item {
+    margin-left: 50px;
   }
 }

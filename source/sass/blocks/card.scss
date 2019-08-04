@@ -116,7 +116,7 @@
     flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
-    min-height: 334px;
+    height: 334px; //min-height doesn't work in ie11
 
     &:hover {
       box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -152,5 +152,54 @@
   .card__price {
     font-size: 17px;
     line-height: 1.41;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    display: block;
+    width: 316px;
+  }
+
+  .card__link-img {
+    &:hover + .card__content,
+    &:focus + .card__content {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active + .card__content {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .card__img {
+    width: 316px;
+    height: 462px;
+  }
+
+  .card__content {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 197px; //min-height doesn't work in ie11
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus-within {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .card__name {
+    margin: 25px 20px 2px 0;
+  }
+
+  .card__text {
+    margin: 3px 0 10px 0;
   }
 }
