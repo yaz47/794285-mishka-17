@@ -90,3 +90,67 @@
   background-repeat: no-repeat;
   background-position: top right;
 }
+
+@media (min-width: $tablet-width) {
+  .card {
+    display: flex;
+  }
+
+  .card__link-img {
+    &:hover + .card__content,
+    &:focus + .card__content {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active + .card__content {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .card__img {
+    width: 334px;
+    height: 334px;
+  }
+
+  .card__content {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 334px;
+
+    &:hover {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus-within {
+      box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .card__name {
+    margin: 25px 40px 2px 0;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .card__text {
+    margin: 3px 0 20px 0;
+
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .card__price-tag {
+    margin-top: auto;
+  }
+
+  .card__price {
+    font-size: 17px;
+    line-height: 1.41;
+  }
+}

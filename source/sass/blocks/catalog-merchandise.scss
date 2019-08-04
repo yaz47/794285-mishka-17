@@ -12,3 +12,35 @@
 .catalog-merchandise__item {
   margin-bottom: 30px;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog-merchandise {
+    position: relative;
+    padding-top: 70px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      width: 100%;
+      height: 24px;
+      top: -20px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
+  }
+
+  .catalog-merchandise__item {
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-merchandise {
+    &::before {
+      height: 34px;
+      top: -140px;
+    }
+  }
+}
