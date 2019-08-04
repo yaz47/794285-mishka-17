@@ -83,51 +83,65 @@
   <main>
     <h1 class="inner-title">Каталог товаров</h1>
     <section class="catalog-merchandise">
-      <h2 class="visually-hidden">Перечень товаров</h2>
-      <ul class="catalog-merchandise__list">
-        <li class="catalog-merchandise__item">
-          <article class="catalog-merchandise__card card">
-            <a class="card__link" href="merch.html">
-              <img class="card__img" src="img/photo-hare-mobile@1x.jpg" width="260" height="195"
-                alt="Зайчик-попрыгайчик">
-            </a>
-            <a class="card__link" href="merch.html">
-              <h3 class="card__name">Зайчик-попрыгайчик</h3>
-            </a>
-            <p class="card__text">Рост 30 см, вес 200 г</p>
-            <b class="card__price">1 200 руб.</b>
-            <a class="card__cart" href="cart.html" aria-label="Положить товар в корзину"></a>
-          </article>
-        </li>
-        <li class="catalog-merchandise__item">
-          <article class="catalog-merchandise__card card">
-            <a class="card__link" href="merch.html">
-              <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195"
-                alt="Корзинка для белья">
-            </a>
-            <a class="card__link" href="merch.html">
-              <h3 class="card__name">Корзинка для белья</h3>
-            </a>
-            <p class="card__text">Диаметр 15 см, высота 10 см</p>
-            <b class="card__price">690 руб.</b>
-            <a class="card__cart" href="merch.html" aria-label="Положить товар в корзину"></a>
-          </article>
-        </li>
-        <li class="catalog-merchandise__item">
-          <article class="catalog-merchandise__card card">
-            <a class="card__link" href="cart.html">
-              <img class="card__img" src="img/photo-toys-mobile@1x.jpg" width="260" height="195"
-                alt="Большая корзинка для игрушек">
-            </a>
-            <a class="card__link" href="merch.html">
-              <h3 class="card__name">Большая корзинка для игрушек</h3>
-            </a>
-            <p class="card__text">Диаметр 30 см, высота 30 см</p>
-            <b class="card__price">1 500 руб.</b>
-            <a class="card__cart" href="cart.html" aria-label="Положить товар в корзину"></a>
-          </article>
-        </li>
-      </ul>
+      <div class="catalog-merchandise__container container">
+        <h2 class="visually-hidden">Перечень товаров</h2>
+        <ul class="catalog-merchandise__list">
+          <li class="catalog-merchandise__item">
+            <article class="catalog-merchandise__card card">
+              <a class="card__link-img" href="merch.html">
+                <img class="card__img" src="img/photo-hare-mobile@1x.jpg" width="260" height="195"
+                  alt="Зайчик-попрыгайчик">
+              </a>
+              <div class="card__content">
+                <a class="card__link" href="merch.html">
+                  <h3 class="card__name">Зайчик-попрыгайчик</h3>
+                </a>
+                <p class="card__text">Рост 30 см, вес 200 г</p>
+                <div class="card__price-tag">
+                  <b class="card__price">1 200 руб.</b>
+                  <a class="card__cart" href="cart.html" aria-label="Положить товар в корзину"></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog-merchandise__item">
+            <article class="catalog-merchandise__card card">
+              <a class="card__link-img" href="merch.html">
+                <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" width="260" height="195"
+                  alt="Корзинка для белья">
+              </a>
+              <div class="card__content">
+                <a class="card__link" href="merch.html">
+                  <h3 class="card__name">Корзинка для белья</h3>
+                </a>
+                <p class="card__text">Диаметр 15 см, высота 10 см</p>
+                <div class="card__price-tag">
+                  <b class="card__price">690 руб.</b>
+                  <a class="card__cart" href="merch.html" aria-label="Положить товар в корзину"></a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="catalog-merchandise__item">
+            <article class="catalog-merchandise__card card">
+              <a class="card__link-img" href="cart.html">
+                <img class="card__img" src="img/photo-toys-mobile@1x.jpg" width="260" height="195"
+                  alt="Большая корзинка для игрушек">
+              </a>
+              <div class="card__content">
+                <a class="card__link" href="merch.html">
+                  <h3 class="card__name">Большая корзинка для игрушек</h3>
+                </a>
+                <p class="card__text">Диаметр 30 см, высота 30 см</p>
+                <div class="card__price-tag">
+                  <b class="card__price">1 500 руб.</b>
+                  <a class="card__cart" href="cart.html" aria-label="Положить товар в корзину"></a>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
     <article class="production">
       <h2 class="production__title">Процесс производства</h2>
