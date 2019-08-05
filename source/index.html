@@ -105,6 +105,11 @@
         <h2 class="popular-merch__title">Вязаные корзинки</h2>
         <span class="popular-merch__feature">Товар недели</span>
         <div class="popular-merch__wrapper">
+          <picture class="popular-merch__img">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
+            <img src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
+          </picture>
           <p class="popular-merch__description">
             Экологически чистая пряжа, ручной работы. Доступны в шести
             расцветках и трех размерах.
@@ -123,13 +128,10 @@
               <td class="spec__column-2">15 см</td>
             </tr>
           </table>
-          <picture class="popular-merch__img">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-            <img src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
-          </picture>
           <span class="popular-merch__price">Цена: 990 руб.</span>
-          <a class="popular-merch__order-button button" href="#">Заказать</a>
+          <div class="popular-merch__button-wrapper">
+            <a class="popular-merch__order-button button" href="#">Заказать</a>
+          </div>
         </div>
       </div>
     </section>

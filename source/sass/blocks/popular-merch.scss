@@ -29,27 +29,34 @@
 }
 
 .popular-merch__wrapper {
-  margin: 17px 0;
-  padding: 0 1px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px 0;
 }
 
 .popular-merch__description {
   margin: 10px 0;
+
+  order: 1;
 }
 
 .popular-merch__spec {
-  margin: 18px 0 30px 0;
+  margin: 7px 0 30px 0;
   padding: 0;
+
+  order: 2;
 }
 
 .popular-merch__img {
   display: flex;
   justify-content: center;
+
+  order: 3;
 }
 
 .popular-merch__price {
   display: block;
-  margin: 25px 0;
+  margin: 23px 0;
   padding: 0 1px;
 
   font-size: 17px;
@@ -57,6 +64,14 @@
   line-height: 1.41;
   color: $default-text-color;
   text-align: center;
+
+  order: 4;
+}
+
+.popular-merch__button-wrapper {
+  text-align: center;
+
+  order: 5;
 }
 
 .popular-merch__order-button {
@@ -105,31 +120,45 @@
   }
 
   .popular-merch__wrapper {
-    margin: 17px 375px 17px 0;
+    display: block;
+    margin: 17px 0 17px 0;
     padding: 0 1px;
   }
 
+  .popular-merch__img {
+    float: right;
+
+    justify-content: flex-end;
+    width: 340px;
+    margin: 8px 0 10px 25px;
+  }
+
   .popular-merch__description {
-    margin: 10px 0 40px 0;
+    margin: 10px 0;
 
     font-size: 17px;
     line-height: 1.76;
   }
 
-  .popular-merch__img {
-    position: absolute;
-    top: 105px;
-    right: 0;
-
-    width: 340px;
-    justify-content: flex-end;
+  .popular-merch__spec {
+    margin: 38px 0 15px 0;
   }
 
   .popular-merch__price {
-    margin: 55px 0 35px 0;
+    margin: 57px 0 35px -15px;
 
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  .popular-merch__button-wrapper {
+    margin-left: -13px;
+  }
+
+  .popular-merch__order-button {
+    display: inline-block;
+    width: 292px;
+    margin: 0 auto;
   }
 }
 
@@ -158,21 +187,20 @@
   }
 
   .popular-merch__wrapper {
-    margin: 17px 582px 17px 175px;
-    padding: 0 1px;
+    margin: 17px 0 17px 175px;
   }
 
-  .popular-merch__description {
-    margin: 10px 0 50px 0;
+  .popular-merch__img {
+    margin: -158px 0 10px 50px;
+
+    width: 530px;
+  }
+
+  .popular-merch__spec {
+    margin: 50px 0 15px 0;
   }
 
   .popular-merch__price {
     margin: 110px 0 35px 0;
-  }
-
-  .popular-merch__img {
-    top: -55px;
-
-    width: 530px;
   }
 }
