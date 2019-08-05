@@ -15,11 +15,13 @@
 
 .comment__author {
   display: block;
-  margin: 25px 0;
+  margin: 28px 0;
   padding: 0;
 }
 
 .comment__author-name {
+  display: block;
+
   font-size: 17px;
   font-weight: bold;
   font-style: normal;
@@ -28,6 +30,9 @@
 }
 
 .comment__author-tag {
+  display: block;
+  margin-top: 3px;
+
   font-size: 17px;
   font-weight: normal;
   font-style: normal;
@@ -43,7 +48,7 @@
   }
 
   .comment__author {
-    margin: 60px 200px 60px 0;
+    margin: 63px 200px 61px 0;
   }
 }
 
@@ -53,6 +58,6 @@
   }
 
   .comment__author {
-    margin: 40px 200px 100px 0;
+    margin: 42px 200px 103px 0;
   }
 }
