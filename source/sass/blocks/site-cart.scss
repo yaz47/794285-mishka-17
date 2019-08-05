@@ -1,8 +1,7 @@
 .site-cart {
   position: relative;
   display: block;
-  padding: 26px 10% 20px 23.75%;
-  min-height: 80px;
+  padding: 26px 40px 29px 77px;
 
   font-family: $default-font;
   font-size: 17px;
@@ -11,14 +10,14 @@
   text-align: left;
   color: $title-text-color;
 
-  border-bottom: 1px solid $grey--light;
+  border-top: 1px solid $grey--light;
 
   &::before {
     content: "";
 
     position: absolute;
     top: 50%;
-    left: calc(23.75% - 45px);
+    left: 32px;
     width: 21px;
     height: 18px;
 
@@ -51,8 +50,14 @@
   .site-cart {
     padding: 30px 0 30px 80px;
 
+    text-align: right;
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid $grey--light;
+
     &::before {
-      left: 31px;
+      left: 32px;
     }
   }
 }
