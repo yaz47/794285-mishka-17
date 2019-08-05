@@ -9,7 +9,7 @@
   position: relative;
   display: block;
   min-height: 103px;
-  padding: 28px 65% 30px 9%;
+  padding: 26px 65% 28px 30px;
 
   font-family: $default-font;
   font-size: 19px;
@@ -28,12 +28,12 @@
 
     position: absolute;
     top: 50%;
-    right: 8%;
+    right: 30px;
     width: 60px;
     height: 60px;
 
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top right;
 
     opacity: 0.5;
     transform: translateY(-50%);
@@ -82,7 +82,7 @@
   .store-items__link {
     width: 100%;
     min-height: 119px;
-    padding: 30px 75% 30px 9%;
+    padding: 30px 75% 30px 35px;
 
     font-size: 20px;
     line-height: 1.5;
@@ -90,6 +90,10 @@
     &:hover {
       padding-top: 25px;
       padding-bottom: 40px;
+    }
+
+    &::after {
+      right: 35px;
     }
   }
 }
