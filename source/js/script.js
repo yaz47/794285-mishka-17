@@ -466,3 +466,38 @@ if (header) {
 
   toggle.onclick = toggleMenu;
 }
+
+const modal = document.querySelector('.modal');
+
+if (modal) {
+  document.addEventListener('click', (evt) => {
+    if (evt.target.matches('.js--modal-cart')) {
+      evt.preventDefault();
+      modal.classList.remove('modal--hide');
+    }
+  });
+
+  document.addEventListener('keyup', (evt) => {
+    if (evt.code === 'Escape') {
+      document.querySelectorAll('.modal')
+        .forEach((elem) => {
+          if (!elem.classList.contains('modal--hide')) {
+            elem.firstElementChild.classList.add('modal--zoomOut');
+          }
+        });
+    }
+  });
+
+  document.addEventListener('click', (evt) => {
+    if (evt.target.matches('.modal')) {
+      evt.target.firstElementChild.classList.add('modal--zoomOut');
+    }
+  });
+
+  document.addEventListener('animationend', (evt) => {
+    if (evt.target.matches('.modal--zoomOut')) {
+      evt.target.closest('.modal').classList.add('modal--hide');
+      evt.target.classList.remove('modal--zoomOut');
+    }
+  });
+}
