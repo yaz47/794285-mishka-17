@@ -99,3 +99,37 @@
     color: rgba($inverse-text-color, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .modal-cart {
+    left: calc(100vw / 2 - 566px / 2);
+    width: 566px;
+  }
+
+  .modal-cart__container {
+    margin: 0 103px;
+  }
+
+  .modal-cart__title {
+    margin: 35px 0 13px 0;
+
+    font-size: 30px;
+    line-height: 1.9;
+  }
+
+  .modal-cart__legend {
+    font-size: 17px;
+    line-height: 1.76;
+  }
+
+  .modal-cart__label {
+    width: 112px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal-cart__container {
+    width: auto;
+    margin: 0 103px;
+  }
+}
