@@ -447,3 +447,22 @@ function pixelGlass() {
 window.onload = function () {
   pixelGlass();
 };
+
+const header = document.querySelector('.site-header');
+
+if (header) {
+  const toggle = header.querySelector('.site-header__toggle');
+  const nav = header.querySelector('.site-header__navigation');
+  const userInterface = header.querySelector('.site-header__user-interface');
+
+  const toggleMenu = () => {
+    toggle.classList.toggle('toggle--active');
+    nav.classList.toggle('site-header__navigation--closed');
+    userInterface.classList.toggle('site-header__user-interface--closed');
+  }
+
+  header.classList.remove('site-header--no-js');
+  toggleMenu();
+
+  toggle.onclick = toggleMenu;
+}

@@ -37,7 +37,7 @@
 
 <body>
 
-  <header class="site-header">
+  <header class="site-header site-header--no-js">
     <div class="site-header__container container">
       <a class="site-header__site-logo site-logo" aria-label="На главную">
         <picture class="site-header__site-logo-img site-logo__img">
@@ -46,7 +46,11 @@
           <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
         </picture>
       </a>
-      <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
+      <button class="site-header__toggle toggle toggle--animation toggle--active" type="button" aria-label="Открыть меню" aria-controls="Навигация">
+        <span class="toggle-box">
+          <span class="toggle-inner"></span>
+        </span>
+      </button>
       <nav class="site-header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
