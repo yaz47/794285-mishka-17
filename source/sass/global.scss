@@ -20,6 +20,7 @@ img {
 body {
   margin: 0;
   padding: 0;
+  min-width: 320px;
 
   font-family: $default-font;
   font-size: 13px;
@@ -28,6 +29,7 @@ body {
   color: $default-text-color;
 
   background-color: $default-bg-color;
+  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -44,4 +46,22 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  position: relative;
+  margin: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+.modal {
+  display: none;
 }

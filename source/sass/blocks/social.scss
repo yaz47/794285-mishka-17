@@ -1,31 +1,44 @@
 .social {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.social__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__button {
   display: block;
+  width: 30px;
+  height: 30px;
 
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
 
   &--insta {
-    width: 22px;
-    height: 21px;
-
     background-image: url("../img/icon-insta.svg");
   }
 
   &--fb {
-    width: 15px;
-    height: 28px;
-
     background-image: url("../img/icon-fb.svg");
   }
 
   &--twitter {
-    width: 23px;
-    height: 20px;
-
     background-image: url("../img/icon-twitter.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

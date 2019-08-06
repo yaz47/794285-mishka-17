@@ -1,0 +1,144 @@
+.site-header__container {
+  @media (max-width: $only-mobile-width) {
+    margin: 0;
+  }
+}
+
+.site-header__site-logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  border-top: 1px solid $grey--light;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header__site-logo-img {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 21px auto;
+  padding: 0;
+}
+
+.site-header__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.site-header__new-list {
+  display: none;
+}
+
+.site-header__feature {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .site-header__container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .site-header__toggle {
+    display: none;
+  }
+
+  .site-header__site-logo {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 40%;
+
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .site-header__site-logo-img {
+    width: 112px;
+    height: 46px;
+    margin: 21px auto 19px 0;
+  }
+
+  .site-header__user-interface {
+    display: flex;
+    width: 350px;
+
+    overflow: hidden;
+  }
+
+  .site-header__site-search {
+    &:focus-within {
+      flex-grow: 1;
+    }
+
+    &:focus-within ~ .site-header__site-cart {
+      display: none;
+    }
+  }
+
+  .site-header__site-cart {
+    flex-grow: 1;
+  }
+
+  .site-header__navigation {
+    order: 1;
+  }
+
+  .site-header__feature {
+    display: block;
+    flex-grow: 1;
+    margin: 0;
+    padding: 18px 0 18px 10px;
+
+    font-family: $default-font;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: $title-text-color;
+    text-align: right;
+
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-header__navigation {
+    order: -1;
+  }
+
+  .site-header__site-logo {
+    width: 250px;
+  }
+
+  .site-header__site-logo-img {
+    width: 149px;
+    height: 72px;
+    margin: 7px auto 7px 40px;
+  }
+
+  .site-header__new-list {
+    display: flex;
+    flex-grow: 1;
+    width: 40%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  .site-header__new-list-link {
+    display: block;
+    padding: 18px 60px 18px 0;
+
+    font-family: $default-font;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.6;
+    color: $title-text-color;
+  }
+
+  .site-header__feature {
+    width: 40%;
+  }
+}

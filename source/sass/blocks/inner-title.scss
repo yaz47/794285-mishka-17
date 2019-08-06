@@ -1,0 +1,36 @@
+.inner-title {
+  display: block;
+  margin: 0;
+  padding: 70px 10px 77px 10px;
+
+  font-family: $default-font;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.11;
+  color: $title-text-color;
+  text-align: center;
+
+  background-color: $pink--light;
+  border-top: 1px solid $grey--light;
+}
+
+@media (min-width: $tablet-width) {
+  .inner-title {
+    margin-top: -60px;
+    padding: 95px 10px 88px 10px;
+
+    font-size: 43px;
+    line-height: 1.16;
+
+    border-top: 1px solid $grey--light;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner-title {
+    padding: 93px 10px 110px 10px;
+
+    font-size: 53px;
+    line-height: 1.08;
+  }
+}
