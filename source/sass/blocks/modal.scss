@@ -1,0 +1,47 @@
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba($white, 0.9);
+
+  &--hide {
+    display: none;
+  }
+
+  &--zoomIn {
+    animation: zoomIn 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+
+  &--zoomOut {
+    animation: zoomOut 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  }
+}

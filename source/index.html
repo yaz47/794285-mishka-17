@@ -37,7 +37,7 @@
 
 <body>
 
-  <header class="site-header">
+  <header class="site-header site-header--no-js">
     <div class="site-header__container container">
       <a class="site-header__site-logo site-logo" aria-label="На главную">
         <picture class="site-header__site-logo-img site-logo__img">
@@ -46,7 +46,12 @@
           <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
         </picture>
       </a>
-      <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
+      <button class="site-header__toggle toggle toggle--animation toggle--active" type="button"
+        aria-label="Открыть меню">
+        <span class="toggle-box">
+          <span class="toggle-inner"></span>
+        </span>
+      </button>
       <nav class="site-header__navigation navigation">
         <ul class="navigation__list">
           <li class="navigation__item">
@@ -130,7 +135,7 @@
           </table>
           <span class="popular-merch__price">Цена: 990 руб.</span>
           <div class="popular-merch__button-wrapper">
-            <a class="popular-merch__order-button button" href="#">Заказать</a>
+            <a class="popular-merch__order-button button js--modal-cart" href="#">Заказать</a>
           </div>
         </div>
       </div>
@@ -244,31 +249,33 @@
       </a>
     </div>
   </footer>
-  <div class="modal">
-    <section class="modal-cart">
-      <h2 class="modal-cart__title">Добавить в корзину</h2>
-      <form class="modal-cart__form size-from" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="size-form__fieldset">
-          <legend class="size-form__legend">Выберите размер:</legend>
-          <ul class="size-form__list">
-            <li class="size-form__item">
-              <label class="size-form__label" for="size-s">S</label>
-              <input class="size-form__radio" type="radio" name="size" value="s" id="size-s" checked>
-            </li>
-            <li class="size-form__item">
-              <label class="size-form__label" for="size-m">M</label>
-              <input class="size-form__radio" type="radio" name="size" value="m" id="size-m">
-            </li>
-            <li class="size-form__item">
-              <label class="size-form__label" for="size-l">L</label>
-              <input class="size-form__radio" type="radio" name="size" value="l" id="size-l">
-            </li>
-          </ul>
-        </fieldset>
-        <button class="size-form__button button" type="submit">
-          Добавить
-        </button>
-      </form>
+  <div class="modal modal--hide">
+    <section class="modal-cart modal--zoomIn">
+      <div class="modal-cart__container container">
+        <h2 class="modal-cart__title">Добавить в&nbsp;корзину</h2>
+        <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="modal-cart__fieldset">
+            <legend class="modal-cart__legend">Выберите размер:</legend>
+            <ul class="modal-cart__list">
+              <li class="modal-cart__item">
+                <input class="modal-cart__radio visually-hidden" type="radio" name="size" value="s" id="size-s" checked>
+                <label class="modal-cart__label" for="size-s">S</label>
+              </li>
+              <li class="modal-cart__item">
+                <input class="modal-cart__radio visually-hidden" type="radio" name="size" value="m" id="size-m">
+                <label class="modal-cart__label" for="size-m">M</label>
+              </li>
+              <li class="modal-cart__item">
+                <input class="modal-cart__radio visually-hidden" type="radio" name="size" value="l" id="size-l">
+                <label class="modal-cart__label" for="size-l">L</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="modal-cart__button" type="submit">
+            Добавить
+          </button>
+        </form>
+      </div>
     </section>
   </div>
 

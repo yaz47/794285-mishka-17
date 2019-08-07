@@ -1,3 +1,7 @@
+.site-header--no-js .site-header__toggle {
+  display: none;
+}
+
 .site-header__container {
   @media (max-width: $only-mobile-width) {
     margin: 0;
@@ -23,8 +27,16 @@
 
 .site-header__toggle {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  right: 20px;
+}
+
+.site-header__navigation--closed {
+  display: none;
+}
+
+.site-header__user-interface--closed {
+  display: none;
 }
 
 .site-header__new-list {
@@ -82,6 +94,7 @@
   }
 
   .site-header__navigation {
+    display: block;
     order: 1;
   }
 

@@ -13,6 +13,7 @@
       /* Mobile layout by default */
       background-image: url("img/pixel-glass/mishka-form-mobile-with-menu.jpg");
     }
+
     /* Tablet */
     @media (min-width: 768px) {
       html {
@@ -20,6 +21,7 @@
         background-image: url("img/pixel-glass/mishka-form-tablet.jpg");
       }
     }
+
     /* Desktop */
     @media (min-width: 1150px) {
       html {
@@ -27,6 +29,7 @@
         background-image: url("img/pixel-glass/mishka-form-desktop.jpg");
       }
     }
+
   </style>
   <script src="js/script.js" defer></script>
   <link href="css/style.css" rel="stylesheet">
@@ -34,48 +37,53 @@
 
 <body>
 
-    <header class="site-header">
-        <div class="site-header__container container">
-          <a class="site-header__site-logo site-logo" href="index.html" aria-label="На главную">
-            <picture class="site-header__site-logo-img site-logo__img">
-              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
-            </picture>
-          </a>
-          <button class="site-header__toggle toggle" type="button" aria-label="Открыть меню"></button>
-          <nav class="site-header__navigation navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <a class="navigation__link" href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="navigation__item">
-                <a class="navigation__link" href="form.html">Вязание на заказ</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="site-header__user-interface">
-            <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
-              <label class="visually-hidden" for="search">Поиск по сайту</label>
-              <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
-                required>
-              <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
-            </form>
-            <a class="site-header__site-cart site-cart" href="#">
-              Корзина: <span class="site-cart__contents">пока пуста</span>
-            </a>
-          </div>
-          <ul class="site-header__new-list">
-            <li class="site-header__new-list-item">
-              <a class="site-header__new-list-link" href="#">Новые поступления</a>
-            </li>
-            <li class="site-header__new-list-item">
-              <a class="site-header__new-list-link" href="#">Распродажа</a>
-            </li>
-          </ul>
-          <p class="site-header__feature">Бесплатная доставка по России</p>
-        </div>
-      </header>
+  <header class="site-header site-header--no-js">
+    <div class="site-header__container container">
+      <a class="site-header__site-logo site-logo" href="index.html" aria-label="На главную">
+        <picture class="site-header__site-logo-img site-logo__img">
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
+        </picture>
+      </a>
+      <button class="site-header__toggle toggle toggle--animation toggle--active" type="button"
+        aria-label="Открыть меню">
+        <span class="toggle-box">
+          <span class="toggle-inner"></span>
+        </span>
+      </button>
+      <nav class="site-header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="site-header__user-interface">
+        <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
+            required>
+          <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
+        </form>
+        <a class="site-header__site-cart site-cart" href="#">
+          Корзина: <span class="site-cart__contents">пока пуста</span>
+        </a>
+      </div>
+      <ul class="site-header__new-list">
+        <li class="site-header__new-list-item">
+          <a class="site-header__new-list-link" href="#">Новые поступления</a>
+        </li>
+        <li class="site-header__new-list-item">
+          <a class="site-header__new-list-link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="site-header__feature">Бесплатная доставка по России</p>
+    </div>
+  </header>
 
   <main>
     <h1 class="inner-title">Вязание на заказ</h1>
@@ -133,33 +141,41 @@
           <ul class="order-form__list">
             <li class="order-form__item">
               <label class="order-form__label" for="name">Имя:</label>
-              <input class="order-form__input-text" type="text" name="name" id="name" pattern="[а-яА-ЯёЁ]{2,30}" title="Имя может содержать только буквы" placeholder="Введите ваше имя*" autocomplete="on" autofocus required>
+              <input class="order-form__input-text" type="text" name="name" id="name" pattern="[а-яА-ЯёЁ]{2,30}"
+                title="Имя может содержать только буквы" placeholder="Введите ваше имя*" autocomplete="on" autofocus
+                required>
             </li>
             <li class="order-form__item">
               <label class="order-form__label" for="surname">Фамилия:</label>
-              <input class="order-form__input-text" type="text" name="surname" id="surname" pattern="[а-яА-ЯёЁ]{2,40}" title="Фамилия может содержать только буквы" placeholder="Укажите фамилию*" autocomplete="on" required>
+              <input class="order-form__input-text" type="text" name="surname" id="surname" pattern="[а-яА-ЯёЁ]{2,40}"
+                title="Фамилия может содержать только буквы" placeholder="Укажите фамилию*" autocomplete="on" required>
             </li>
             <li class="order-form__item">
               <label class="order-form__label" for="patronymic">Отчество:</label>
-              <input class="order-form__input-text" type="text" name="patronymic" id="patronymic" pattern="[а-яА-ЯёЁ]{2,50}" title="Отчество может содержать только буквы" placeholder="Отчество, если желаете">
+              <input class="order-form__input-text" type="text" name="patronymic" id="patronymic"
+                pattern="[а-яА-ЯёЁ]{2,50}" title="Отчество может содержать только буквы"
+                placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
         <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Тел</legend>
           <label class="order-form__label" for="tel">Телефон:</label>
-          <input class="order-form__input-text" type="tel" name="tel" id="tel" pattern="\+7(\s\d{3}){2}(\s\d{2}){2}" title="Телефон начинается с +7, может содержать только цифры и пробелы" placeholder="+7 XXX XXX XX XX*" autocomplete="on" required>
+          <input class="order-form__input-text" type="tel" name="tel" id="tel" pattern="\+7(\s\d{3}){2}(\s\d{2}){2}"
+            title="Телефон начинается с +7, может содержать только цифры и пробелы" placeholder="+7 XXX XXX XX XX*"
+            autocomplete="on" required>
         </fieldset>
         <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">E-mail</legend>
           <label class="order-form__label" for="email">e-mail:</label>
-          <input class="order-form__input-text" type="email" name="email" id="email" placeholder="Ваш Email*" autocomplete="on" required>
+          <input class="order-form__input-text" type="email" name="email" id="email" placeholder="Ваш Email*"
+            autocomplete="on" required>
         </fieldset>
         <fieldset class="order-form__fieldset">
           <legend class="order-form__legend">Доп</legend>
           <label class="order-form__label" for="add">Дополнительно:</label>
-          <textarea class="order-form__textarea" name="add" id="add"
-            placeholder="Опишите все ваши пожелания к заказу" rows="6"></textarea>
+          <textarea class="order-form__textarea" name="add" id="add" placeholder="Опишите все ваши пожелания к заказу"
+            rows="6"></textarea>
         </fieldset>
         <span class="order-form__text">*Поля обязательны для заполнения</span>
         <button class="order-form__button button" type="submit">
@@ -170,28 +186,28 @@
   </main>
 
   <footer class="site-footer">
-      <div class="site-footer__container container">
-        <a class="site-footer__site-logo site-logo" href="index.html" aria-label="На главную">
-          <img class="site-logo__img" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
-        </a>
-        <ul class="site-footer__social-list social">
-          <li class="social__item">
-            <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
-          </li>
-          <li class="social__item">
-            <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
-          </li>
-        </ul>
-        <a class="site-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
-          <b class="site-footer__developer-text">Разработано</b>
-          <img class="site-footer__developer-logo" src="img/logo-htmlacademy.svg" width="27" height="34"
-            alt="Логотип HTML Academy">
-        </a>
-      </div>
-    </footer>
+    <div class="site-footer__container container">
+      <a class="site-footer__site-logo site-logo" href="index.html" aria-label="На главную">
+        <img class="site-logo__img" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
+      </a>
+      <ul class="site-footer__social-list social">
+        <li class="social__item">
+          <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
+        </li>
+      </ul>
+      <a class="site-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
+        <b class="site-footer__developer-text">Разработано</b>
+        <img class="site-footer__developer-logo" src="img/logo-htmlacademy.svg" width="27" height="34"
+          alt="Логотип HTML Academy">
+      </a>
+    </div>
+  </footer>
 
 </body>
 
