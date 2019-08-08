@@ -23,6 +23,16 @@
     background-color: $aqua-marine;
   }
 
+  &--interior:hover,
+  &--interior:active {
+    background-color: $blue--downy;
+  }
+
+  &--toys:hover,
+  &--toys:active {
+    background-color: $puerto-rico;
+  }
+
   &::after {
     content: "";
 

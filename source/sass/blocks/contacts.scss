@@ -59,13 +59,14 @@
   color: inherit;
   border-bottom: 1px solid $brilliant-green-cyan;
 
-  &:hover,
-  &:focus {
-    opacity: 0.6;
+  &:hover {
+    color: $puerto-rico;
+    border-bottom: 1px solid $puerto-rico;
   }
 
   &:active {
-    opacity: 0.3;
+    color: rgba($puerto-rico, 0.3);
+    border-bottom: 1px solid rgba($puerto-rico, 0.1);
   }
 }
 
