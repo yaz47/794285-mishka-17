@@ -15,30 +15,19 @@
 }
 
 .social__button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
 
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &--insta {
-    background-image: url("../img/icon-insta.svg");
+  &:hover .social__icon {
+    fill: $puerto-rico;
+    opacity: 1;
   }
 
-  &--fb {
-    background-image: url("../img/icon-fb.svg");
-  }
-
-  &--twitter {
-    background-image: url("../img/icon-twitter.svg");
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
+  &:active .social__icon {
+    fill: $puerto-rico;
     opacity: 0.3;
   }
 }

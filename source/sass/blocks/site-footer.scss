@@ -33,13 +33,21 @@
   align-items: center;
   margin: 23px 10px;
 
-  &:hover > .site-footer__developer-logo {
-    opacity: 1;
+  &:hover .site-footer__developer-logo {
+    fill: $puerto-rico;
+  }
+
+  &:active .site-footer__developer-logo {
+    fill: $puerto-rico;
   }
 
   &:active {
     opacity: 0.3;
   }
+}
+
+.site-footer__developer-logo {
+  fill: $blue--seafoam;
 }
 
 .site-footer__developer-text {
@@ -80,6 +88,17 @@
     height: 34px;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
+
+    &:hover .site-footer__icon-logo {
+      fill: $puerto-rico;
+    }
+
+    &:active .site-footer__icon-logo {
+      fill: $puerto-rico;
+      opacity: 0.3;
+    }
   }
 
   .site-footer__social-list {

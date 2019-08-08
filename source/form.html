@@ -66,12 +66,18 @@
       </nav>
       <div class="site-header__user-interface">
         <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
+          <svg class="site-search__icon-search" width="181" height="18">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
           <label class="visually-hidden" for="search">Поиск по сайту</label>
           <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
             required>
           <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
         </form>
         <a class="site-header__site-cart site-cart" href="#">
+          <svg class="site-cart__icon-cart" width="21" height="18">
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
           Корзина: <span class="site-cart__contents">пока пуста</span>
         </a>
       </div>
@@ -190,23 +196,40 @@
   <footer class="site-footer">
     <div class="site-footer__container container">
       <a class="site-footer__site-logo" href="index.html" aria-label="На главную">
-        <img class="site-footer__site-logo-img" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
+        <svg class="site-footer__icon-logo" width="102" height="34" role="img">
+          <title>Логотип магазина Мишка</title>
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
       </a>
       <ul class="site-footer__social-list social">
         <li class="social__item">
-          <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
+          <a class="social__button" href="#" aria-label="Инстаграм">
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#insta"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
+          <a class="social__button" href="#" aria-label="Фейсбук">
+            <svg class="social__icon" width="15" height="28">
+              <use xlink:href="img/sprite.svg#fb"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
+          <a class="social__button" href="#" aria-label="Твиттер">
+            <svg class="social__icon" width="23" height="20">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <a class="site-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
         <b class="site-footer__developer-text">Разработано</b>
-        <img class="site-footer__developer-logo" src="img/logo-htmlacademy.svg" width="27" height="34"
-          alt="Логотип HTML Academy">
+        <svg class="site-footer__developer-logo" width="27" height="34" role="img">
+          <title>Логотип HTML Academy</title>
+          <use xlink:href="img/sprite.svg#developer"></use>
+        </svg>
       </a>
     </div>
   </footer>

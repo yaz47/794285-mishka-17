@@ -119,8 +119,10 @@
         <span class="popular-merch__feature">Товар недели</span>
         <div class="popular-merch__wrapper">
           <picture class="popular-merch__img">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <source media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
           </picture>
           <p class="popular-merch__description">
@@ -237,23 +239,40 @@
   <footer class="site-footer">
     <div class="site-footer__container container">
       <a class="site-footer__site-logo" aria-label="На главную">
-        <img class="site-footer__site-logo-img" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
+        <svg class="site-footer__icon-logo" width="102" height="34" role="img">
+          <title>Логотип магазина Мишка</title>
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
       </a>
       <ul class="site-footer__social-list social">
         <li class="social__item">
-          <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
+          <a class="social__button" href="#" aria-label="Инстаграм">
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#insta"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
+          <a class="social__button" href="#" aria-label="Фейсбук">
+            <svg class="social__icon" width="15" height="28">
+              <use xlink:href="img/sprite.svg#fb"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
+          <a class="social__button" href="#" aria-label="Твиттер">
+            <svg class="social__icon" width="23" height="20">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <a class="site-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
         <b class="site-footer__developer-text">Разработано</b>
-        <img class="site-footer__developer-logo" src="img/logo-htmlacademy.svg" width="27" height="34"
-          alt="Логотип HTML Academy">
+        <svg class="site-footer__developer-logo" width="27" height="34" role="img">
+          <title>Логотип HTML Academy</title>
+          <use xlink:href="img/sprite.svg#developer"></use>
+        </svg>
       </a>
     </div>
   </footer>
