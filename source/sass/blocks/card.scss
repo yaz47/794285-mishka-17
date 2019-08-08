@@ -93,6 +93,9 @@
 
 @media (min-width: $tablet-width) {
   .card {
+    display: flex;
+    width: 100%;
+
     &:hover {
       box-shadow: 6px 0 10px 0 rgba(0, 0, 0, 0.1);
     }
@@ -107,16 +110,13 @@
   }
 
   .card__content {
-    min-height: 334px;
-    margin-left: calc(334px + 28px);
-    padding: 0.1px 0 75px 0;
+    width: 50%;
+    margin: 0;
+    padding: 0 28px 90px 28px;
   }
 
   .card__link-img {
-    position: absolute;
-    left: 0;
-    width: 334px;
-    min-height: 334px;
+    width: 50%;
   }
 
   .card__name {
@@ -137,14 +137,14 @@
   .card__price-tag {
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 28px;
+    width: calc(100% - 28px * 2);
     margin: 0;
-    padding: 0.1px;
+    padding: 0.1px 5px;
   }
 
   .card__price {
-    margin: 23px 10px 23px 0;
+    margin: 21px 10px 23px 0;
     padding-bottom: 5px;
 
     font-size: 17px;
@@ -154,6 +154,7 @@
 
 @media (min-width: $desktop-width) {
   .card {
+    display: block;
     width: 316px;
 
     &:hover {
@@ -170,14 +171,14 @@
   }
 
   .card__link-img {
-    position: static;
     width: auto;
     min-height: 462px;
   }
 
   .card__content {
-    min-height: 197px;
-    margin: 0 28px;
+    width: auto;
+    min-height: 170px;
+    padding: 0 28px 78px 28px;
   }
 
   .card__name {
@@ -187,5 +188,9 @@
 
   .card__text {
     margin: 4px 0 10px 0;
+  }
+
+  .card__price-tag {
+    padding: 0.1px;
   }
 }
