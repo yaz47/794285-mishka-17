@@ -15,9 +15,19 @@
 
   border-top: 1px solid $grey--light;
   border-bottom: 1px solid transparent;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.site-header__site-logo-img {
+.site-header__site-logo-picture {
   display: block;
   width: 86px;
   height: 35px;
@@ -66,7 +76,7 @@
     border-bottom: 1px solid transparent;
   }
 
-  .site-header__site-logo-img {
+  .site-header__site-logo-picture {
     width: 112px;
     height: 46px;
     margin: 21px auto 19px 0;
@@ -124,7 +134,7 @@
     width: 250px;
   }
 
-  .site-header__site-logo-img {
+  .site-header__site-logo-picture {
     width: 149px;
     height: 72px;
     margin: 7px auto 7px 40px;
@@ -149,6 +159,14 @@
     font-weight: bold;
     line-height: 1.6;
     color: $title-text-color;
+
+    &:hover {
+      color: rgba($title-text-color, 0.6);
+    }
+
+    &:active {
+      color: rgba($title-text-color, 0.3);
+    }
   }
 
   .site-header__feature {

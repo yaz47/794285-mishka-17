@@ -60,12 +60,12 @@
   color: $default-text-color;
   text-align: center;
 
-  border: 2px solid $grey--light;
+  border: 2px solid rgba($grey--dark, 0.1);
 
   &:hover,
   &:focus,
   .modal-cart__radio:focus + & {
-    border: 2px solid $grey--easy;
+    border: 2px solid rgba($grey--dark, 0.3);
   }
 
   &:active,
@@ -88,7 +88,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  background-color: $green--light;
+  background-color: $blue--seafoam;
   border: none;
 
   &:hover {
