@@ -31,6 +31,8 @@
     }
 
   </style>
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/pixelglass.min.js" defer></script>
   <script src="js/script.js" defer></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -111,9 +113,9 @@
         <span class="popular-merch__feature">Товар недели</span>
         <div class="popular-merch__wrapper">
           <picture class="popular-merch__img">
-            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-            <img src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+            <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
           </picture>
           <p class="popular-merch__description">
             Экологически чистая пряжа, ручной работы. Доступны в шести

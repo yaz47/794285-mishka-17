@@ -16,7 +16,7 @@
 @media (min-width: $tablet-width) {
   .catalog-merchandise {
     position: relative;
-    padding-top: 70px;
+    padding-top: 71px;
 
     &::before {
       content: "";
@@ -32,13 +32,13 @@
   }
 
   .catalog-merchandise__item {
-    margin-bottom: 55px;
+    margin-bottom: 53px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog-merchandise {
-    padding-top: 120px;
+    padding-top: 122px;
 
     &::before {
       height: 34px;

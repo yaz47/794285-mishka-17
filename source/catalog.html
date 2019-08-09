@@ -31,6 +31,8 @@
     }
 
   </style>
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/pixelglass.min.js" defer></script>
   <script src="js/script.js" defer></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -95,9 +97,9 @@
             <article class="catalog-merchandise__card card">
               <a class="card__link-img" href="merch.html">
                 <picture class="card__picture">
-                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
-                  <img class="card__img" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
+                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
                 </picture>
               </a>
               <div class="card__content">
@@ -116,9 +118,9 @@
             <article class="catalog-merchandise__card card">
               <a class="card__link-img" href="merch.html">
                 <picture class="card__picture">
-                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
-                  <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
+                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
                 </picture>
               </a>
               <div class="card__content">
@@ -137,14 +139,14 @@
             <article class="catalog-merchandise__card card">
               <a class="card__link-img" href="cart.html">
                 <picture class="card__picture">
-                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg">
-                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
-                  <img class="card__img" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
+                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
                 </picture>
               </a>
               <div class="card__content">
                 <a class="card__link" href="merch.html">
-                  <h3 class="card__name">Большая корзинка<br>для игрушек</h3>
+                  <h3 class="card__name">Большая корзинка для игрушек</h3>
                 </a>
                 <p class="card__text">Диаметр 30 см, высота 30 см</p>
                 <div class="card__price-tag">
@@ -157,17 +159,24 @@
         </ul>
       </div>
     </section>
-    <article class="production">
-      <h2 class="production__title">Процесс производства</h2>
-      <div class="production__video video">
-        <a class="video__link" href="#" aria-label="Перейти в ютуб">
-          <img class="video__img" src="https://via.placeholder.com/260x150.png" width="260" height="150" alt="Видео">
-        </a>
-        <button class="video__button" type="button" aria-label="Запустить видео">
-          <!-- TODO: Add inline svg here later -->
-        </button>
-      </div>
-    </article>
+    <div class="container">
+      <article class="production">
+        <h2 class="production__title">Процесс производства</h2>
+        <div class="production__video-container">
+          <picture class="production__picture">
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="production__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео">
+          </picture>
+          <a class="production__video-button" href="video.html" aria-label="Включить видео"></a>
+        </div>
+        <p class="production__text">
+          По просьбе наших любимых фолловеров мы сняли для вас подробное видео
+          о том, как появляются наши товары.
+        </p>
+        <a class="production__order button" href="merch.html">Сделать заказ</a>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
