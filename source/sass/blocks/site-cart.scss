@@ -12,31 +12,6 @@
 
   border-top: 1px solid $grey--light;
 
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 50%;
-    left: 32px;
-    width: 21px;
-    height: 18px;
-
-    background-image: url("../img/icon-cart.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    opacity: 0.6;
-    transform: translateY(-50%);
-  }
-
-  &:hover::before {
-    opacity: 1;
-  }
-
-  &:active::before {
-    opacity: 0.3;
-  }
-
   &:hover {
     color: rgba($title-text-color, 0.6);
   }
@@ -44,6 +19,28 @@
   &:active {
     color: rgba($title-text-color, 0.3);
   }
+
+  &:hover .site-cart__icon-cart {
+    fill: $blue--seafoam;
+    opacity: 1;
+  }
+
+  &:active .site-cart__icon-cart {
+    fill: $blue--seafoam;
+    opacity: 0.3;
+  }
+}
+
+.site-cart__icon-cart {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  width: 21px;
+  height: 18px;
+
+  opacity: 0.2;
+
+  transform: translateY(-50%);
 }
 
 @media (min-width: $tablet-width) {
@@ -55,9 +52,5 @@
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     border-left: 1px solid $grey--light;
-
-    &::before {
-      left: 32px;
-    }
   }
 }

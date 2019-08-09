@@ -33,6 +33,7 @@
   </style>
   <script src="js/picturefill.min.js" async></script>
   <script src="js/pixelglass.min.js" defer></script>
+  <script src="js/svg4everybody.min.js" defer></script>
   <script src="js/script.js" defer></script>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -41,11 +42,11 @@
 
   <header class="site-header site-header--no-js">
     <div class="site-header__container container">
-      <a class="site-header__site-logo site-logo" href="index.html" aria-label="На главную">
-        <picture class="site-header__site-logo-img site-logo__img">
+      <a class="site-header__site-logo" href="index.html" aria-label="На главную">
+        <picture class="site-header__site-logo-picture">
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
+          <img class="site-header__site-logo-img" src="img/logo-mobile.svg" alt="Логотип магазина Мишка">
         </picture>
       </a>
       <button class="site-header__toggle toggle toggle--animation toggle--active" type="button"
@@ -66,12 +67,18 @@
       </nav>
       <div class="site-header__user-interface">
         <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
+          <svg class="site-search__icon-search" width="181" height="18">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
           <label class="visually-hidden" for="search">Поиск по сайту</label>
           <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
             required>
           <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
         </form>
         <a class="site-header__site-cart site-cart" href="#">
+          <svg class="site-cart__icon-cart" width="21" height="18">
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
           Корзина: <span class="site-cart__contents">пока пуста</span>
         </a>
       </div>
@@ -97,9 +104,12 @@
             <article class="catalog-merchandise__card card">
               <a class="card__link-img" href="merch.html">
                 <picture class="card__picture">
-                  <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
-                  <img class="card__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+                  <source media="(min-width: 1150px)"
+                    srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x"
+                    alt="Зайчик-попрыгайчик">
                 </picture>
               </a>
               <div class="card__content">
@@ -109,7 +119,11 @@
                 <p class="card__text">Рост 30 см, вес 200 г</p>
                 <div class="card__price-tag">
                   <b class="card__price">1 200 руб.</b>
-                  <a class="card__cart js--modal-cart" href="cart.html" aria-label="Положить товар в корзину"></a>
+                  <a class="card__cart js--modal-cart" href="cart.html" aria-label="Положить товар в корзину">
+                    <svg class="card__icon-cart" width="21" height="18">
+                      <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </article>
@@ -118,9 +132,12 @@
             <article class="catalog-merchandise__card card">
               <a class="card__link-img" href="merch.html">
                 <picture class="card__picture">
-                  <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-                  <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                  <source media="(min-width: 1150px)"
+                    srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"
+                    alt="Корзинка для белья">
                 </picture>
               </a>
               <div class="card__content">
@@ -130,7 +147,11 @@
                 <p class="card__text">Диаметр 15 см, высота 10 см</p>
                 <div class="card__price-tag">
                   <b class="card__price">690 руб.</b>
-                  <a class="card__cart js--modal-cart" href="merch.html" aria-label="Положить товар в корзину"></a>
+                  <a class="card__cart js--modal-cart" href="merch.html" aria-label="Положить товар в корзину">
+                    <svg class="card__icon-cart" width="21" height="18">
+                      <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </article>
@@ -139,9 +160,12 @@
             <article class="catalog-merchandise__card card">
               <a class="card__link-img" href="cart.html">
                 <picture class="card__picture">
-                  <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
-                  <img class="card__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                  <source media="(min-width: 1150px)"
+                    srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                  <img class="card__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x"
+                    alt="Большая корзинка для игрушек">
                 </picture>
               </a>
               <div class="card__content">
@@ -151,7 +175,11 @@
                 <p class="card__text">Диаметр 30 см, высота 30 см</p>
                 <div class="card__price-tag">
                   <b class="card__price">1 500 руб.</b>
-                  <a class="card__cart js--modal-cart" href="cart.html" aria-label="Положить товар в корзину"></a>
+                  <a class="card__cart js--modal-cart" href="cart.html" aria-label="Положить товар в корзину">
+                    <svg class="card__icon-cart" width="21" height="18">
+                      <use xlink:href="img/sprite.svg#cart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
             </article>
@@ -168,7 +196,11 @@
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img class="production__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео">
           </picture>
-          <a class="production__video-button" href="video.html" aria-label="Включить видео"></a>
+          <a class="production__video-button" href="video.html" aria-label="Включить видео">
+            <svg class="production__icon-button" width="101" height="77">
+              <use xlink:href="img/sprite.svg#play"></use>
+            </svg>
+          </a>
         </div>
         <p class="production__text">
           По просьбе наших любимых фолловеров мы сняли для вас подробное видео
@@ -181,24 +213,41 @@
 
   <footer class="site-footer">
     <div class="site-footer__container container">
-      <a class="site-footer__site-logo site-logo" href="index.html" aria-label="На главную">
-        <img class="site-logo__img" src="img/logo-footer.svg" width="102" height="34" alt="Логотип магазина Мишка">
+      <a class="site-footer__site-logo" href="index.html" aria-label="На главную">
+        <svg class="site-footer__icon-logo" width="102" height="34" role="img">
+          <title>Логотип магазина Мишка</title>
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
       </a>
       <ul class="site-footer__social-list social">
         <li class="social__item">
-          <a class="social__button social__button--insta" href="#" aria-label="Инстаграм"></a>
+          <a class="social__button" href="#" aria-label="Инстаграм">
+            <svg class="social__icon" width="22" height="21">
+              <use xlink:href="img/sprite.svg#insta"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__button social__button--fb" href="#" aria-label="Фейсбук"></a>
+          <a class="social__button" href="#" aria-label="Фейсбук">
+            <svg class="social__icon" width="15" height="28">
+              <use xlink:href="img/sprite.svg#fb"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__button social__button--twitter" href="#" aria-label="Твиттер"></a>
+          <a class="social__button" href="#" aria-label="Твиттер">
+            <svg class="social__icon" width="23" height="20">
+              <use xlink:href="img/sprite.svg#twitter"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <a class="site-footer__developer" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Разработчик сайта">
         <b class="site-footer__developer-text">Разработано</b>
-        <img class="site-footer__developer-logo" src="img/logo-htmlacademy.svg" width="27" height="34"
-          alt="Логотип HTML Academy">
+        <svg class="site-footer__developer-logo" width="27" height="34" role="img">
+          <title>Логотип HTML Academy</title>
+          <use xlink:href="img/sprite.svg#developer"></use>
+        </svg>
       </a>
     </div>
   </footer>

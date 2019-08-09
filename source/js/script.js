@@ -21,7 +21,7 @@ const modal = document.querySelector('.modal');
 
 if (modal) {
   document.addEventListener('click', (evt) => {
-    if (evt.target.matches('.js--modal-cart')) {
+    if (evt.target.closest('.js--modal-cart')) {
       evt.preventDefault();
       modal.classList.remove('modal--hide');
     }
