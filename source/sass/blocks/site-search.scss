@@ -49,6 +49,10 @@
   &::placeholder {
     color: $title-text-color;
   }
+
+  &:hover::placeholder {
+    color: rgba($title-text-color, 0.6);
+  }
 }
 
 @media (min-width: $tablet-width) {
