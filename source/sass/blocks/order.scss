@@ -18,13 +18,9 @@
   padding: 15px 0 23px 0;
 }
 
-.order__container {
-  padding: 0 30px;
-}
-
 .order__fieldset {
   position: relative;
-  margin: 0;
+  margin: 0 30px;
   padding: 0;
 
   border: none;
@@ -60,6 +56,15 @@
   padding: 25px 0 10px 0;
 
   list-style: none;
+}
+
+.order__list--flex {
+  display: flex;
+  flex-flow: row wrap;
+
+  & .order__item {
+    width: 250px;
+  }
 }
 
 .order__item {
@@ -233,6 +238,10 @@
   }
 }
 
+.order__container--button {
+  margin: 0 30px;
+}
+
 .order__note {
   margin: 5px 0;
   padding: 0;
@@ -278,16 +287,17 @@
     padding: 1px 0 1px 0;
   }
 
-  .order__container {
-    padding: 0 50px;
-  }
-
   .order__container--pink {
     background-color: $pink--light;
   }
 
-  .order__container--wide {
-    padding: 0 10px 0 50px;
+  .order__fieldset {
+    display: flex;
+    margin: 0 50px;
+  }
+
+  .order__fieldset--wide {
+    margin: 0 10px 0 50px;
 
     & .order__legend {
       width: 23.5%;
@@ -296,10 +306,6 @@
     & .order__list {
       width: 76.5%;
     }
-  }
-
-  .order__fieldset {
-    display: flex;
   }
 
   .order__legend {
@@ -436,6 +442,81 @@
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    margin: 33px 0 45px 0;
+    margin: 33px 50px 45px 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order {
+    padding-top: 105px;
+
+    &::before {
+      height: 34px;
+      top: -23px;
+    }
+  }
+
+  .order__text {
+    width: 700px;
+    margin: 10px auto;
+    padding: 0;
+  }
+
+  .order__fieldset {
+    width: 926px;
+    margin: 0 auto;
+  }
+
+  .order__fieldset--wide {
+    margin: 0 auto;
+
+    & .order__legend {
+      width: 114px;
+    }
+
+    & .order__list {
+      width: 811px;
+    }
+  }
+
+  .order__legend {
+    width: 114px;
+  }
+
+  .order__list {
+    width: 700px;
+  }
+
+  .order__list--flex {
+    & .order__item {
+      width: 262px;
+    }
+  }
+
+  .order__input-text--tel {
+    width: 700px;
+  }
+
+  .order__icon--tel {
+    bottom: 27px;
+    right: 121px;
+  }
+
+  .order__input-text--email {
+    width: 700px;
+  }
+
+  .order__icon--email {
+    bottom: 59px;
+    right: 117px;
+  }
+
+  .order__textarea {
+    width: 700px;
+  }
+
+  .order__container--button {
+    width: 700px;
+    margin: 30px auto 45px auto;
   }
 }
