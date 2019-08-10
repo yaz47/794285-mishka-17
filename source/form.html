@@ -104,8 +104,8 @@
       </p>
       <form class="order__form" action="https://echo.htmlacademy.ru" method="POST">
         <div class="order__container">
-          <fieldset class="order__fieldset">
-            <legend class="order__legend">Тип</legend>
+          <div class="order__fieldset">
+            <span class="order__legend">Тип</span>
             <ul class="order__list">
               <li class="order__item order__item--radio">
                 <input class="order__radio visually-hidden" type="radio" name="type" value="accessory" id="accessory"
@@ -117,12 +117,12 @@
                 <label class="order__label order__label--radio" for="toy">Детская игрушка</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
         </div>
-        <div class="order__container">
-          <fieldset class="order__fieldset">
-            <legend class="order__legend">Цвет</legend>
-            <ul class="order__list">
+        <div class="order__container order__container--pink">
+          <div class="order__fieldset order__fieldset--wide">
+            <span class="order__legend">Цвет</span>
+            <ul class="order__list order__list--flex">
               <li class="order__item">
                 <input class="order__checkbox visually-hidden" type="checkbox" name="white" id="white" checked>
                 <label class="order__label order__label--checkbox" for="white">Белый</label>
@@ -148,36 +148,36 @@
                 <label class="order__label order__label--checkbox" for="orange">Оранжевый</label>
               </li>
             </ul>
-          </fieldset>
+          </div>
         </div>
         <div class="order__container">
-          <fieldset class="order__fieldset">
-            <legend class="order__legend">ФИО</legend>
+          <div class="order__fieldset">
+            <span class="order__legend">ФИО</span>
             <ul class="order__list">
-              <li class="order__item">
+              <li class="order__item order__item--flex">
                 <label class="order__label order__label--text" for="name">Имя:</label>
                 <input class="order__input-text" type="text" name="name" id="name" pattern="[а-яА-ЯёЁ]{2,30}"
                   title="Имя может содержать только буквы" placeholder="Введите ваше имя*" autocomplete="on" autofocus
                   required>
               </li>
-              <li class="order__item">
+              <li class="order__item order__item--flex">
                 <label class="order__label order__label--text" for="surname">Фамилия:</label>
                 <input class="order__input-text" type="text" name="surname" id="surname" pattern="[а-яА-ЯёЁ]{2,40}"
                   title="Фамилия может содержать только буквы" placeholder="Укажите фамилию*" autocomplete="on"
                   required>
               </li>
-              <li class="order__item">
+              <li class="order__item order__item--flex">
                 <label class="order__label order__label--text" for="patronymic">Отчество:</label>
                 <input class="order__input-text" type="text" name="patronymic" id="patronymic"
                   pattern="[а-яА-ЯёЁ]{2,50}" title="Отчество может содержать только буквы"
                   placeholder="Отчество, если желаете">
               </li>
             </ul>
-          </fieldset>
+          </div>
         </div>
-        <div class="order__container">
-          <fieldset class="order__fieldset">
-            <legend class="order__legend">Тел</legend>
+        <div class="order__container order__container--pink">
+          <div class="order__fieldset">
+            <span class="order__legend order__legend--tel">Тел</span>
             <label class="visually-hidden" for="tel">Телефон:</label>
             <input class="order__input-text order__input-text--tel" type="tel" name="tel" id="tel" pattern="\+7(\s\d{3}){2}(\s\d{2}){2}"
               title="Телефон начинается с +7, может содержать только цифры и пробелы" placeholder="+7 XXX XXX XX XX*"
@@ -185,28 +185,28 @@
             <svg class="order__icon order__icon--tel" width="25" height="24">
               <use xlink:href="img/sprite.svg#phone"></use>
             </svg>
-          </fieldset>
+          </div>
         </div>
-        <div class="order__container">
-          <fieldset class="order__fieldset">
-            <legend class="order__legend">E-mail</legend>
+        <div class="order__container order__container--pink">
+          <div class="order__fieldset">
+            <span class="order__legend order__legend--email">E-mail</span>
             <label class="visually-hidden" for="email">e-mail:</label>
             <input class="order__input-text order__input-text--email" type="email" name="email" id="email" placeholder="Ваш Email*"
               autocomplete="on" required>
               <svg class="order__icon order__icon--email" width="32" height="32">
                 <use xlink:href="img/sprite.svg#email"></use>
               </svg>
-          </fieldset>
+            </div>
         </div>
         <div class="order__container">
-          <fieldset class="order__fieldset">
-            <legend class="order__legend">Доп</legend>
+          <div class="order__fieldset">
+            <span class="order__legend">Доп</span>
             <label class="visually-hidden" for="add">Дополнительно:</label>
             <textarea class="order__textarea" name="add" id="add" placeholder="Опишите все ваши пожелания к заказу"
-              rows="7"></textarea>
-          </fieldset>
+              rows="6"></textarea>
+          </div>
         </div>
-        <div class="order__container">
+        <div class="order__container order__container--button">
           <p class="order__note">*Поля обязательны для заполнения</p>
           <button class="order__button button" type="submit">
             Отправить заказ
