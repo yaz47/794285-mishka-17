@@ -82,20 +82,30 @@ function createSourceCss() {
 
 function initServer() {
   browserSync.init({
-    server: 'source/',
+    server: 'build/',
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  watch('source/sass/**/*.{scss,sass}', series(css));
-  watch('source/*.html').on('change', browserSync.reload);
+  watch('source/sass/**/*.{scss,sass}', parallel(createBuildCss, createSourceCss));
+  watch('source/img/exclude-*/**', series(exports.build, refreshServer));
+  watch('source/*.html', series(createBuildHtml, refreshServer));
+}
+
+function refreshServer(done) {
+  browserSync.reload();
+  done();
+}
+
+function cleanImages() {
+  return del(['source/img/**', '!source/img/exclude-*/**']);
 }
 
 function optimizeImages() {
   return src('source/img/exclude-original/**/*.{png,jpg,svg}', {
-      base: 'source/img/original'
+      base: 'source/img/exclude-original'
     })
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
@@ -107,7 +117,7 @@ function optimizeImages() {
 
 function createWebp() {
   return src('source/img/exclude-original/**/*.{png,jpg}', {
-      base: 'source/img/original'
+      base: 'source/img/exclude-original'
     })
     .pipe(webp({quality: 90}))
     .pipe(dest('source/img'));
@@ -122,14 +132,10 @@ function createSprite() {
     .pipe(dest('build/img'));
 }
 
+exports.images = parallel(optimizeImages, createWebp);
 exports.build = series(
-  cleanBuild, parallel(
-    copyBuild, createBuildCss, createSourceCss, createSprite
-  ),
+  cleanBuild, copyBuild,
+  parallel(createBuildCss, createSourceCss, createSprite),
   createBuildHtml
 );
-exports.start = series(css, server);
-exports.images = images;
-exports.webp = createWebp;
-exports.sprite = createSprite;
-exports.html = html;
+exports.start = series(exports.build, initServer);
