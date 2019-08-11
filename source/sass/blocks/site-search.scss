@@ -5,6 +5,7 @@
   border-top: 1px solid $grey--light;
 
   overflow: hidden;
+  cursor: pointer;
 
   &:hover .site-search__icon-search {
     fill: $blue--seafoam;
@@ -31,6 +32,7 @@
 
   opacity: 0.2;
   transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .site-search__input-text {
