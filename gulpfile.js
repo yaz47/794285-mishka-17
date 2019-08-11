@@ -1,37 +1,135 @@
-"use strict";
+'use strict';
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
+const {
+  src,
+  dest,
+  parallel,
+  series,
+  watch
+} = require('gulp');
 
-gulp.task("css", function () {
-  return gulp.src("source/sass/style.scss")
+const plumber = require('gulp-plumber');
+const sourcemap = require('gulp-sourcemaps');
+const rename = require('gulp-rename');
+const del = require('del');
+
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
+
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const browserSync = require('browser-sync').create();
+const csso = require('gulp-csso');
+
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const svgstore = require('gulp-svgstore');
+
+function copyBuild() {
+  return src([
+      'source/fonts/**/*.{woff,woff2}',
+      'source/img/**',
+      '!source/img/exclude-*/**',
+      'source/js/**',
+      'source/*.ico'
+    ], {
+      base: 'source'
+    })
+    .pipe(dest('build'));
+}
+
+function cleanBuild() {
+  return del('build');
+}
+
+function createBuildHtml() {
+  return src('source/*.html')
+    .pipe(posthtml([
+      include({
+        root: './build/'
+      })
+    ]))
+    .pipe(dest('build'));
+}
+
+function createBuildCss() {
+  return src('source/sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(server.stream());
-});
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('build/css'))
+    .pipe(browserSync.stream());
+}
 
-gulp.task("server", function () {
-  server.init({
-    server: "source/",
+function createSourceCss() {
+  return src('source/sass/style.scss')
+    .pipe(plumber())
+    .pipe(sass({
+      outputStyle: 'expanded',
+      sourceComments: true
+    }))
+    .pipe(rename('style.css'))
+    .pipe(dest('source/css'))
+}
+
+function initServer() {
+  browserSync.init({
+    server: 'source/',
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
-});
+  watch('source/sass/**/*.{scss,sass}', series(css));
+  watch('source/*.html').on('change', browserSync.reload);
+}
 
-gulp.task("start", gulp.series("css", "server"));
+function optimizeImages() {
+  return src('source/img/exclude-original/**/*.{png,jpg,svg}', {
+      base: 'source/img/original'
+    })
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+    ]))
+    .pipe(dest('source/img'));
+}
+
+function createWebp() {
+  return src('source/img/exclude-original/**/*.{png,jpg}', {
+      base: 'source/img/original'
+    })
+    .pipe(webp({quality: 90}))
+    .pipe(dest('source/img'));
+}
+
+function createSprite() {
+  return src('source/img/exclude-sprite/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest('build/img'));
+}
+
+exports.build = series(
+  cleanBuild, parallel(
+    copyBuild, createBuildCss, createSourceCss, createSprite
+  ),
+  createBuildHtml
+);
+exports.start = series(css, server);
+exports.images = images;
+exports.webp = createWebp;
+exports.sprite = createSprite;
+exports.html = html;
