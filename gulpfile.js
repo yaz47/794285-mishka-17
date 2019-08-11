@@ -89,9 +89,14 @@ function initServer() {
     ui: false
   });
 
-  watch('source/sass/**/*.{scss,sass}', parallel(createBuildCss, createSourceCss));
-  watch('source/img/exclude-*/**', series(exports.build, refreshServer));
-  watch('source/*.html', series(createBuildHtml, refreshServer));
+  watch('source/sass/**/*.{scss,sass}',
+    series(createBuildCss, createSourceCss));
+  watch('source/img/exclude-original/**',
+    series(exports.build, refreshServer));
+  watch('source/img/exclude-sprite/**',
+    series(createSprite, createBuildHtml, refreshServer));
+  watch('source/*.html',
+    series(createBuildHtml, refreshServer));
 }
 
 function refreshServer(done) {
@@ -100,7 +105,12 @@ function refreshServer(done) {
 }
 
 function cleanImages() {
-  return del(['source/img/**', '!source/img/exclude-*/**']);
+  return del([
+      'source/img/**',
+      '!source/img',
+      '!source/img/exclude-**',
+      '!source/img/exclude-*/**/*'
+    ]);
 }
 
 function optimizeImages() {
@@ -132,10 +142,10 @@ function createSprite() {
     .pipe(dest('build/img'));
 }
 
-exports.images = parallel(optimizeImages, createWebp);
+exports.images = series(cleanImages, optimizeImages, createWebp);
 exports.build = series(
-  cleanBuild, copyBuild,
-  parallel(createBuildCss, createSourceCss, createSprite),
+  exports.images, cleanBuild, copyBuild,
+  parallel(series(createBuildCss, createSourceCss), createSprite),
   createBuildHtml
 );
 exports.start = series(exports.build, initServer);
