@@ -28,13 +28,8 @@ if (modal) {
   });
 
   document.addEventListener('keyup', (evt) => {
-    if (evt.code === 'Escape') {
-      document.querySelectorAll('.modal')
-        .forEach((elem) => {
-          if (!elem.classList.contains('modal--hide')) {
-            elem.firstElementChild.classList.add('modal--zoomOut');
-          }
-        });
+    if (evt.keyCode === 27) {
+      modal.firstElementChild.classList.add('modal--zoomOut');
     }
   });
 

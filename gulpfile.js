@@ -12,97 +12,25 @@ const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const del = require('del');
-
-const posthtml = require('gulp-posthtml');
-const include = require('posthtml-include');
-
-const sass = require('gulp-sass');
-sass.compiler = require('node-sass');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const browserSync = require('browser-sync').create();
-const csso = require('gulp-csso');
+const concat = require('gulp-concat');
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const svgstore = require('gulp-svgstore');
 
-function copyBuild() {
-  return src([
-      'source/fonts/**/*.{woff,woff2}',
-      'source/img/**',
-      '!source/img/exclude-*/**',
-      'source/js/**',
-      'source/*.ico'
-    ], {
-      base: 'source'
-    })
-    .pipe(dest('build'));
-}
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const csso = require('gulp-csso');
 
-function cleanBuild() {
-  return del('build');
-}
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
-function createBuildHtml() {
-  return src('source/*.html')
-    .pipe(posthtml([
-      include({
-        root: './build/'
-      })
-    ]))
-    .pipe(dest('build'));
-}
+const posthtml = require('gulp-posthtml');
+const include = require('posthtml-include');
 
-function createBuildCss() {
-  return src('source/sass/style.scss')
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
-    .pipe(rename('style.min.css'))
-    .pipe(sourcemap.write('.'))
-    .pipe(dest('build/css'))
-    .pipe(browserSync.stream());
-}
-
-function createSourceCss() {
-  return src('source/sass/style.scss')
-    .pipe(plumber())
-    .pipe(sass({
-      outputStyle: 'expanded',
-      sourceComments: true
-    }))
-    .pipe(rename('style.css'))
-    .pipe(dest('source/css'))
-}
-
-function initServer() {
-  browserSync.init({
-    server: 'build/',
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  watch('source/sass/**/*.{scss,sass}',
-    series(createBuildCss, createSourceCss));
-  watch('source/img/exclude-original/**',
-    series(exports.build, refreshServer));
-  watch('source/img/exclude-sprite/**',
-    series(createSprite, createBuildHtml, refreshServer));
-  watch('source/*.html',
-    series(createBuildHtml, refreshServer));
-}
-
-function refreshServer(done) {
-  browserSync.reload();
-  done();
-}
+const browserSync = require('browser-sync').create();
 
 function cleanImages() {
   return del([
@@ -133,6 +61,65 @@ function createWebp() {
     .pipe(dest('source/img'));
 }
 
+function cleanBuild() {
+  return del('build');
+}
+
+function copyBuild() {
+  return src([
+      'source/fonts/**/*.{woff,woff2}',
+      'source/img/**',
+      '!source/img/exclude-*/**',
+      'source/*.ico'
+    ], {
+      base: 'source'
+    })
+    .pipe(dest('build'));
+}
+
+function createBuildCss() {
+  return src('source/sass/style.scss')
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('build/css'))
+    .pipe(browserSync.stream());
+}
+
+function createSourceCss() {
+  return src('source/sass/style.scss')
+    .pipe(plumber())
+    .pipe(sass({
+      outputStyle: 'expanded',
+      sourceComments: true
+    }))
+    .pipe(rename('style.css'))
+    .pipe(dest('source/css'));
+}
+
+function createBuildJs() {
+  return src([
+      'source/js/polyfill.js',
+      'source/js/script.js',
+      'source/js/picturefill.min.js',
+      'source/js/pixelglass.min.js'
+    ])
+    .pipe(sourcemap.init())
+    .pipe(concat('script.min.js'))
+    .pipe(babel())
+    .pipe(uglify({
+      toplevel: true
+      }))
+    .pipe(sourcemap.write('.'))
+    .pipe(dest('build/js'));
+}
+
 function createSprite() {
   return src('source/img/exclude-sprite/*.svg')
     .pipe(svgstore({
@@ -142,10 +129,47 @@ function createSprite() {
     .pipe(dest('build/img'));
 }
 
+function createBuildHtml() {
+  return src('source/*.html')
+    .pipe(posthtml([
+      include({
+        root: './build/'
+      })
+    ]))
+    .pipe(dest('build'));
+}
+
+function refreshServer(done) {
+  browserSync.reload();
+  done();
+}
+
+function initServer() {
+  browserSync.init({
+    server: 'build/',
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  watch('source/sass/**/*.{scss,sass}',
+    series(createBuildCss, createSourceCss));
+  watch('source/img/exclude-original/**',
+    series(exports.build, refreshServer));
+  watch('source/js/**/*.js',
+    series(exports.js, refreshServer));
+  watch('source/img/exclude-sprite/**/*.svg',
+    series(createSprite, createBuildHtml, refreshServer));
+  watch('source/*.html',
+    series(createBuildHtml, refreshServer));
+}
+
 exports.images = series(cleanImages, optimizeImages, createWebp);
+exports.js = createBuildJs;
 exports.build = series(
   exports.images, cleanBuild, copyBuild,
-  parallel(series(createBuildCss, createSourceCss), createSprite),
+  parallel(series(createBuildCss, createSourceCss), createSprite, exports.js),
   createBuildHtml
 );
 exports.start = series(exports.build, initServer);
