@@ -29,6 +29,7 @@ const uglify = require('gulp-uglify');
 
 const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
+const htmlmin = require('gulp-htmlmin');
 
 const browserSync = require('browser-sync').create();
 
@@ -136,6 +137,7 @@ function createBuildHtml() {
         root: './build/'
       })
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(dest('build'));
 }
 
