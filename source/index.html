@@ -29,16 +29,17 @@
         background-image: url("img/pixel-glass/mishka-index-desktop.jpg");
       }
     }
-
   </style>
-  <script src="js/picturefill.min.js" async></script>
-  <script src="js/pixelglass.min.js" defer></script>
-  <script src="js/svg4everybody.min.js" defer></script>
-  <script src="js/script.js" defer></script>
-  <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
+
+  <div style="display: none;">
+    <include src="img/sprite.svg"></include>
+  </div>
 
   <header class="site-header site-header--no-js">
     <div class="site-header__container container">
@@ -68,26 +69,26 @@
       <div class="site-header__user-interface">
         <form class="site-header__site-search site-search" action="https://echo.htmlacademy.ru" method="POST">
           <svg class="site-search__icon-search" width="181" height="18">
-            <use xlink:href="img/sprite.svg#search"></use>
+            <use xlink:href="#icon-search"></use>
           </svg>
           <label class="visually-hidden" for="search">Поиск по сайту</label>
           <input class="site-search__input-text" type="search" id="search" name="search" placeholder="Поиск по сайту"
             required>
           <button class="visually-hidden" type="submit" aria-label="Начать поиск"></button>
         </form>
-        <a class="site-header__site-cart site-cart" href="#">
+        <a class="site-header__site-cart site-cart" href="cart.html">
           <svg class="site-cart__icon-cart" width="21" height="18">
-            <use xlink:href="img/sprite.svg#cart"></use>
+            <use xlink:href="#icon-cart"></use>
           </svg>
           Корзина: <span class="site-cart__contents">пока пуста</span>
         </a>
       </div>
       <ul class="site-header__new-list">
         <li class="site-header__new-list-item">
-          <a class="site-header__new-list-link" href="#">Новые поступления</a>
+          <a class="site-header__new-list-link" href="new.html">Новые поступления</a>
         </li>
         <li class="site-header__new-list-item">
-          <a class="site-header__new-list-link" href="#">Распродажа</a>
+          <a class="site-header__new-list-link" href="sale.html">Распродажа</a>
         </li>
       </ul>
       <p class="site-header__feature">Бесплатная доставка по России</p>
@@ -102,12 +103,12 @@
         </h1>
         <ul class="site-description__list store-items">
           <li class="store-items__item">
-            <a class="store-items__link store-items__link--interior" href="#">
+            <a class="store-items__link store-items__link--interior" href="interior.html">
               Предметы интерьера
             </a>
           </li>
           <li class="store-items__item">
-            <a class="store-items__link store-items__link--toys" href="#">
+            <a class="store-items__link store-items__link--toys" href="toys.html">
               Детские игрушки
             </a>
           </li>
@@ -120,6 +121,11 @@
         <span class="popular-merch__feature">Товар недели</span>
         <div class="popular-merch__wrapper">
           <picture class="popular-merch__img">
+            <source type="image/webp" media="(min-width: 1150px)"
+              srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)"
               srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
@@ -146,7 +152,7 @@
           </table>
           <span class="popular-merch__price">Цена: 990 руб.</span>
           <div class="popular-merch__button-wrapper">
-            <a class="popular-merch__order-button button js--modal-cart" href="#">Заказать</a>
+            <a class="popular-merch__order-button button js--modal-cart" href="cart.html">Заказать</a>
           </div>
         </div>
       </div>
@@ -202,7 +208,7 @@
           <button class="feedback__arrow feedback__arrow--left" type="button" aria-label="Предыдущий отзыв"></button>
           <button class="feedback__arrow feedback__arrow--right" type="button" aria-label="Следующий отзыв"></button>
         </div>
-        <a class="feedback__button button" href="#">Написать</a>
+        <a class="feedback__button button" href="feedback.html">Написать</a>
       </div>
     </section>
     <section class="contacts">
@@ -237,33 +243,34 @@
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="site-footer__container container">
       <a class="site-footer__site-logo" aria-label="На главную">
         <svg class="site-footer__icon-logo" width="102" height="34" role="img">
           <title>Логотип магазина Мишка</title>
-          <use xlink:href="img/sprite.svg#logo"></use>
+          <use xlink:href="#logo-footer"></use>
         </svg>
       </a>
       <ul class="site-footer__social-list social">
         <li class="social__item">
-          <a class="social__button" href="#" aria-label="Инстаграм">
+          <a class="social__button" href="instagram.html" aria-label="Инстаграм">
             <svg class="social__icon" width="22" height="21">
-              <use xlink:href="img/sprite.svg#insta"></use>
+              <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__button" href="#" aria-label="Фейсбук">
+          <a class="social__button" href="facebook.html" aria-label="Фейсбук">
             <svg class="social__icon" width="15" height="28">
-              <use xlink:href="img/sprite.svg#fb"></use>
+              <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__button" href="#" aria-label="Твиттер">
+          <a class="social__button" href="twitter.html" aria-label="Твиттер">
             <svg class="social__icon" width="23" height="20">
-              <use xlink:href="img/sprite.svg#twitter"></use>
+              <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
         </li>
@@ -272,11 +279,12 @@
         <b class="site-footer__developer-text">Разработано</b>
         <svg class="site-footer__developer-logo" width="27" height="34" role="img">
           <title>Логотип HTML Academy</title>
-          <use xlink:href="img/sprite.svg#developer"></use>
+          <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
     </div>
   </footer>
+
   <div class="modal modal--hide">
     <section class="modal-cart modal--zoomIn">
       <div class="modal-cart__container container">
@@ -306,6 +314,8 @@
       </div>
     </section>
   </div>
+
+  <script src="js/script.min.js"></script>
 
 </body>
 
