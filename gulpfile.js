@@ -108,8 +108,7 @@ function createBuildJs() {
   return src([
       'source/js/polyfill.js',
       'source/js/script.js',
-      'source/js/picturefill.min.js',
-      'source/js/pixelglass.min.js'
+      'source/js/picturefill.min.js'
     ])
     .pipe(sourcemap.init())
     .pipe(concat('script.min.js'))
