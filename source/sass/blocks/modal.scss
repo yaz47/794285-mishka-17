@@ -1,4 +1,4 @@
-@keyframes zoomIn {
+@keyframes zoom-in {
   0% {
     opacity: 0;
     transform: scale3d(0.3, 0.3, 0.3);
@@ -9,7 +9,7 @@
   }
 }
 
-@keyframes zoomOut {
+@keyframes zoom-out {
   0% {
     opacity: 1;
   }
@@ -39,11 +39,11 @@
 }
 
 .modal__section {
-  &--zoomIn {
-    animation: zoomIn 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  &--zoom-in {
+    animation: zoom-in 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 
-  &--zoomOut {
-    animation: zoomOut 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  &--zoom-out {
+    animation: zoom-out 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   }
 }

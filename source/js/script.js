@@ -27,7 +27,7 @@ const modal = document.querySelector('.modal');
 
 if (modal) {
   document.addEventListener('click', (evt) => {
-    if (evt.target.closest('.js--modal-cart')) {
+    if (evt.target.closest('.js-modal-cart')) {
       evt.preventDefault();
       modal.classList.remove('modal--hide');
     }
@@ -35,20 +35,20 @@ if (modal) {
 
   document.addEventListener('keyup', (evt) => {
     if (evt.keyCode === 27) {
-      modal.firstElementChild.classList.add('modal__section--zoomOut');
+      modal.firstElementChild.classList.add('modal__section--zoom-out');
     }
   });
 
   document.addEventListener('click', (evt) => {
     if (evt.target.matches('.modal')) {
-      evt.target.firstElementChild.classList.add('modal__section--zoomOut');
+      evt.target.firstElementChild.classList.add('modal__section--zoom-out');
     }
   });
 
   document.addEventListener('animationend', (evt) => {
-    if (evt.target.matches('.modal__section--zoomOut')) {
+    if (evt.target.matches('.modal__section--zoom-out')) {
       evt.target.closest('.modal').classList.add('modal--hide');
-      evt.target.classList.remove('modal__section--zoomOut');
+      evt.target.classList.remove('modal__section--zoom-out');
     }
   });
 }
