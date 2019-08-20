@@ -29,20 +29,20 @@ if (modal) {
 
   document.addEventListener('keyup', (evt) => {
     if (evt.keyCode === 27) {
-      modal.firstElementChild.classList.add('modal--zoomOut');
+      modal.firstElementChild.classList.add('modal__section--zoomOut');
     }
   });
 
   document.addEventListener('click', (evt) => {
     if (evt.target.matches('.modal')) {
-      evt.target.firstElementChild.classList.add('modal--zoomOut');
+      evt.target.firstElementChild.classList.add('modal__section--zoomOut');
     }
   });
 
   document.addEventListener('animationend', (evt) => {
-    if (evt.target.matches('.modal--zoomOut')) {
+    if (evt.target.matches('.modal__section--zoomOut')) {
       evt.target.closest('.modal').classList.add('modal--hide');
-      evt.target.classList.remove('modal--zoomOut');
+      evt.target.classList.remove('modal__section--zoomOut');
     }
   });
 }
